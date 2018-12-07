@@ -14,8 +14,8 @@ Create a Bootable USB for the OSX, So refer to the Guide by RehabMan [[Guide] Bo
 
     
 ### Bluetooth
-* The Native Atheros BT will work out-of-the Box, But you can't turn off the BT becouse power Management is not supported;
-    * To Fix this, you'll have to get a MacOS compatible wifi+BT card becouse the default one is combo card. The best choice will be BCM94352HMB which has WiFI+BT.
+* The Native Atheros BT will work out-of-the Box, But you can't turn off the BT becouse Power Management is not supported;
+    * To Fix this, you'll have to get a MacOS compatible wifi+BT card becouse the default one is combo card. The best choice will be BCM94352HMB which has WiFi+BT.
 
 
 ### Ethernet
@@ -34,7 +34,7 @@ Create a Bootable USB for the OSX, So refer to the Guide by RehabMan [[Guide] Bo
 * SD Card Reader is not supported and be disabled to save power.
 
 ### Wi-Fi
-* The Wi-Fi Card this Laptop uses is `Atheros qca9377`. Since it is not supported natively, and there are none kexts to enable this card on macOS, We can't use this card on MacOS and I don't think it'll get supported in the duture.
+* The Wi-Fi Card this Laptop uses is `Atheros QCA9377`. Since it is not supported natively, and there are none kexts to enable this card on macOS, We can't use this card on MacOS and I don't think it'll get supported in the future.
 * The Best Choice will be to Replace current Card with BCM94352HMB which has WiFI+BT, or BCM94360HMB Which Supports MacOS natively.
 
 ## Changelog
