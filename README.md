@@ -19,7 +19,7 @@ Create a Bootable USB for the OSX, So refer to the Guide by RehabMan [[Guide] Bo
 
 
 ### Ethernet
-* The Ethernet is `RTL8111`, and you'll need RealtekRTL8111.kext to enable Ethernet.
+* The Ethernet is `8411B`, and you'll need RealtekRTL8111.kext to enable Ethernet.
 
 ### Graphics
 * The iGPU is `Intel UHD Graphics 620`, Please refer to [GPUFixup](https://github.com/Siddhesh9146/Acer-E515-51G-Hackintosh/blob/master/GPUFixup.txt) link to enable the iGPU.
@@ -37,10 +37,6 @@ Create a Bootable USB for the OSX, So refer to the Guide by RehabMan [[Guide] Bo
 * The Wi-Fi Card this Laptop uses is `Atheros QCA9377`. Since it is not supported natively, and there are none kexts to enable this card on macOS, We can't use this card on MacOS and I don't think it'll get supported in the future.
 * The Best Choice will be to Replace current Card with BCM94352HMB which has WiFI+BT, or BCM94360HMB Which Supports MacOS natively.
 
-## Changelog
-
-You can view [Changelog](Changelog.md) for detailed information.
-
 
 
 ## Credits
@@ -51,4 +47,12 @@ You can view [Changelog](Changelog.md) for detailed information.
 
 - Thanks to [apianti](https://sourceforge.net/u/apianti), [blackosx](https://sourceforge.net/u/blackosx), [blusseau](https://sourceforge.net/u/blusseau), [dmazar](https://sourceforge.net/u/dmazar), and [slice2009](https://sourceforge.net/u/slice2009) for providing [Clover](https://sourceforge.net/projects/cloverefiboot).
 
-- Thanks to [RehabMan](https://github.com/RehabMan) for providing [AppleBacklightFixup](https://github.com/RehabMan/AppleBacklightFixup), [EAPD-Codec-Commander](https://github.com/RehabMan/EAPD-Codec-Commander), [OS-X-Clover-Laptop-Config](https://github.com/RehabMan/OS-X-Clover-Laptop-Config), [OS-X-Voodoo-PS2-Controller](https://github.com/RehabMan/OS-X-Voodoo-PS2-Controller).
+- Special Thanks to [RehabMan](https://github.com/RehabMan).
+
+- Thanks to [goodwin](https://github.com/goodwin/) for [ALCPlugfix](https://github.com/goodwin/ALCPlugFix).
+
+- Thanks to [toleda](https://www.tonymacx86.com/members/toleda.2393/) for [AppleHDA patches](https://www.tonymacx86.com/threads/audio-realtek-alc-applehda-guide.143757/).
+
+- Thanks to [EMlyDinEsH](https://osxlatitude.com/profile/7370-emlydinesh/) for [ApplePS2SmartTouchPad.kext](https://osxlatitude.com/forums/topic/1948-elan-focaltech-and-synaptics-smart-touchpad-driver-mac-os-x/).
+
+
