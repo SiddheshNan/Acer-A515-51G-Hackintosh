@@ -41,7 +41,7 @@ Create a Bootable USB for the OSX, So refer to the Guide by RehabMan [[Guide] Bo
 
 ## Credits
 
-- Thanks to [Acidanthera](https://github.com/acidanthera).
+- **Special Thanks** to [Acidanthera](https://github.com/acidanthera) for all the Patches.
 
 - Thanks to [alexandred](https://github.com/alexandred) and [hieplpvip](https://github.com/hieplpvip) for providing [VoodooI2C](https://github.com/alexandred/VoodooI2C).
 
