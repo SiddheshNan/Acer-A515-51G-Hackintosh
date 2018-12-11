@@ -43,8 +43,6 @@ Create a Bootable USB for the OSX, So refer to the Guide by RehabMan [[Guide] Bo
 
 - **Special Thanks** to [Acidanthera](https://github.com/acidanthera) for all the Patches.
 
-- Thanks to [alexandred](https://github.com/alexandred) and [hieplpvip](https://github.com/hieplpvip) for providing [VoodooI2C](https://github.com/alexandred/VoodooI2C).
-
 - Thanks to [apianti](https://sourceforge.net/u/apianti), [blackosx](https://sourceforge.net/u/blackosx), [blusseau](https://sourceforge.net/u/blusseau), [dmazar](https://sourceforge.net/u/dmazar), and [slice2009](https://sourceforge.net/u/slice2009) for providing [Clover](https://sourceforge.net/projects/cloverefiboot).
 
 - Very Very **Special Thanks** to [RehabMan](https://github.com/RehabMan) for All his Work for the Hackintosh Community, Literally 90% of this Guide has his Kexts and Patches.
