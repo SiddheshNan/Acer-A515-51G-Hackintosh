@@ -41,13 +41,13 @@ Create a Bootable USB for the OSX, So refer to the Guide by RehabMan [[Guide] Bo
 
 ## Credits
 
-- Thanks to [Acidanthera](https://github.com/acidanthera) 
+- Thanks to [Acidanthera](https://github.com/acidanthera).
 
 - Thanks to [alexandred](https://github.com/alexandred) and [hieplpvip](https://github.com/hieplpvip) for providing [VoodooI2C](https://github.com/alexandred/VoodooI2C).
 
 - Thanks to [apianti](https://sourceforge.net/u/apianti), [blackosx](https://sourceforge.net/u/blackosx), [blusseau](https://sourceforge.net/u/blusseau), [dmazar](https://sourceforge.net/u/dmazar), and [slice2009](https://sourceforge.net/u/slice2009) for providing [Clover](https://sourceforge.net/projects/cloverefiboot).
 
-- Special Thanks to [RehabMan](https://github.com/RehabMan).
+- Very Very **Special Thanks** to [RehabMan](https://github.com/RehabMan) for All his Work for the Hackintosh Community, Literally 90% of this Guide has his Kexts and Patches.
 
 - Thanks to [goodwin](https://github.com/goodwin/) for [ALCPlugfix](https://github.com/goodwin/ALCPlugFix).
 
@@ -55,4 +55,21 @@ Create a Bootable USB for the OSX, So refer to the Guide by RehabMan [[Guide] Bo
 
 - Thanks to [EMlyDinEsH](https://osxlatitude.com/profile/7370-emlydinesh/) for [ApplePS2SmartTouchPad.kext](https://osxlatitude.com/forums/topic/1948-elan-focaltech-and-synaptics-smart-touchpad-driver-mac-os-x/).
 
+- Thanks to [micky1979](https://www.insanelymac.com/forum/profile/674334-micky1979/) for [AppleHDA patcher(MironeAudio)](https://www.insanelymac.com/forum/files/file/496-applehda-patcher/).
+
+- Thanks to [mackie100projects](https://mackie100projects.altervista.org) for [Clover Configurator](https://mackie100projects.altervista.org/download-clover-configurator/).
+
+- Thanks to [blackosx](https://bitbucket.org/blackosx/darwindumper/) for [DarwinDumper](https://bitbucket.org/blackosx/darwindumper/downloads/).
+
+- Thanks to [tonymacx86](https://www.tonymacx86.com/) for [EFI Mounter](https://www.tonymacx86.com/resources/efi-mounter-v3.280/).
+
+- Thanks to [toleda](https://www.tonymacx86.com/members/toleda.2393/) for [ioregexplorer](https://www.tonymacx86.com/threads/guide-how-to-make-a-copy-of-ioreg.58368/).
+
+- Thanks to cvad-mac for [Kext Utility](http://cvad-mac.narod.ru/index/0-4).
+
+- Thanks to [fatcatsoftware](https://www.fatcatsoftware.com/) for [PlistEditor Pro](https://www.fatcatsoftware.com/plisteditpro/).
+
+- Thanks again to [RehabMan]() for [iasl](https://github.com/RehabMan/Intel-iasl) & [MaciASL](https://bitbucket.org/RehabMan/os-x-maciasl-patchmatic/downloads/).
+
+- And **Special** Thanks to [daliansky](https://github.com/daliansky/) for Some Patches which I used here from [XiaoMi-Pro](https://github.com/daliansky/XiaoMi-Pro/).
 
