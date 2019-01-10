@@ -1,5 +1,5 @@
-# Acer-A515-51G-Hackintosh with MacOS HighSierra and Mojave
-Acer E515-51G Hackintosh Guide for MacOS Sierra, High Sierra And Mojave.
+# Acer-A515-51G-Hackintosh with MacOS Mojave and HighSierra
+Acer E515-51G Hackintosh Guide for MacOS Mojave, And High Sierra.
 
 * Supports 10.13.x and 10.14.x
 
