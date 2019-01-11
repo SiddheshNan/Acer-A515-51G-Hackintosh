@@ -1,7 +1,7 @@
-# Acer-A515-51G-Hackintosh with MacOS HighSierra and Mojave
-Acer E515-51G Hackintosh Guide for MacOS Sierra, High Sierra And Mojave.
+# Acer-A515-51G-Hackintosh with MacOS Mojave and HighSierra
+Acer E515-51G Hackintosh Guide for MacOS Mojave, And High Sierra.
 
-* Supports 10.13.x and 10.14.
+* Supports 10.13.x and 10.14.x
 
 
 ## Installation
@@ -22,15 +22,16 @@ Create a Bootable USB for the OSX, So refer to the Guide by RehabMan [[Guide] Bo
 * The Ethernet is `8411B`, and you'll need RealtekRTL8111.kext to enable Ethernet.
 
 ### Graphics
-* The iGPU is `Intel UHD Graphics 620`, Please refer to [GPUFixup](https://github.com/Siddhesh9146/Acer-E515-51G-Hackintosh/blob/master/GPUFixup.txt) link to enable the iGPU.
-* The discrete graphics' name is `NVIDIA GeForce MX150`, disabled by `SSDT-DDGPU.aml` becuase macOS doesn't support Optimus technology.
+* The iGPU is `Intel UHD Graphics 620`, and its enabled using `Ig-Platform-id=0x591E0000`
+* For HDMI Implementation we need patched the FrameBuffer & HDMI audio, I have already patched it in Config.plist
+* The discrete graphics' name is `NVIDIA GeForce MX150`, and its disabled becuase macOS doesn't support Optimus technology. Plus Battery Life if Improved to 6-7 hours of Backup.
 * Native brightness hotkey support; using DSDT.aml patched from RehabMan's [[Guide] Patching DSDT/SSDT for LAPTOP backlight control](https://www.tonymacx86.com/threads/guide-patching-dsdt-ssdt-for-laptop-backlight-control.152659/).
 
 ### Touchpad
 * The touchpad works After Installing VoodooPs2Controller.kext, After that Install ApplePS2SmartTouchpad.kext in order to recognise the touchpad as native one, And after that all gestures will work fine.
 
 ### USB
-* To Raise the Port Limit, We're using USBInjectAll.kext from RehabMan.
+* To Raise the Port Limit, We're using USBInjectAll.kext from RehabMan. Currently I haven't Created Custom SSDT to raise the port limit yet.. but I'll update it here soon.
 * SD Card Reader is not supported and be disabled to save power.
 
 ### Wi-Fi
@@ -41,7 +42,7 @@ Create a Bootable USB for the OSX, So refer to the Guide by RehabMan [[Guide] Bo
 
 ## Credits
 
-- **Special Thanks** to [Acidanthera](https://github.com/acidanthera) for all the Patches.
+- **Special Thanks** to [Acidanthera](https://github.com/acidanthera) for most of the Patches.
 
 - Thanks to [apianti](https://sourceforge.net/u/apianti), [blackosx](https://sourceforge.net/u/blackosx), [blusseau](https://sourceforge.net/u/blusseau), [dmazar](https://sourceforge.net/u/dmazar), and [slice2009](https://sourceforge.net/u/slice2009) for providing [Clover](https://sourceforge.net/projects/cloverefiboot).
 
