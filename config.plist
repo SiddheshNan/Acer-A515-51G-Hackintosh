@@ -34,7 +34,7 @@
 				<false/>
 			</dict>
 			<key>Name</key>
-			<string>dsdt.aml</string>
+			<string>DSDT.aml</string>
 			<key>Patches</key>
 			<array>
 				<dict>
@@ -272,11 +272,13 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>-v dart=0 darkwake=no nv_disable=1 kext-dev-mode=1 rootless=0 -disablegfxfirmware</string>
+		<string>dart=0 nv_disable=1 -v darkwake=no lilucpu=8 rootless=0 kext-dev-mode=1 -disablegfxfirmware</string>
 		<key>DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>DisableCloverHotkeys</key>
 		<true/>
+		<key>Legacy</key>
+		<string>PBR</string>
 		<key>NeverDoRecovery</key>
 		<true/>
 		<key>NeverHibernate</key>
@@ -405,13 +407,15 @@
 		<dict>
 			<key>Inject</key>
 			<integer>4</integer>
+			<key>ResetHDA</key>
+			<false/>
 		</dict>
 		<key>FakeID</key>
 		<dict>
-			<key>#IntelGFX</key>
-			<string>0x59168086</string>
 			<key>#Kaby Lake-Comment</key>
 			<string>To avoid automatic Clover fake device-id (Skylake) injection</string>
+			<key>IntelGFX</key>
+			<string>0x19168086</string>
 		</dict>
 		<key>Properties</key>
 		<dict>
@@ -419,11 +423,11 @@
 			<dict>
 				<key>AAPL,ig-platform-id</key>
 				<data>
-				AAAbWQ==
+				AAAbGQ==
 				</data>
 				<key>device-id</key>
 				<data>
-				FlkAAA==
+				FhkAAA==
 				</data>
 				<key>framebuffer-con0-enable</key>
 				<integer>1</integer>
@@ -473,7 +477,7 @@
 			<key>FixOwnership</key>
 			<true/>
 			<key>HighCurrent</key>
-			<true/>
+			<false/>
 			<key>Inject</key>
 			<true/>
 		</dict>
@@ -540,10 +544,26 @@
 		<key>ScreenResolution</key>
 		<string>1366x768</string>
 		<key>Theme</key>
-		<string>Xiaomi</string>
+		<string>minimal</string>
 	</dict>
 	<key>Graphics</key>
 	<dict>
+		<key>EDID</key>
+		<dict>
+			<key>Custom</key>
+			<data>
+			AP///////wAGEPKcAAAAABoVAQSVGg54Au8Fl1dUkiciUFQAAAAB
+			AQEBAQEBAQEBAQEBAQEB2h1W4lAAIDBELUcAWMEQAAAYAAAA/ABD
+			b2xvciBMQ0QKICAgAAAA/gBDTU4KICAgICAgICAgAAAA/gBOMTU2
+			QkdBLUVBMgogAA==
+			</data>
+			<key>Inject</key>
+			<true/>
+			<key>ProductID</key>
+			<string>0x40178</string>
+			<key>VendorID</key>
+			<string>0x1552</string>
+		</dict>
 		<key>Inject</key>
 		<dict>
 			<key>ATI</key>
@@ -554,10 +574,12 @@
 			<false/>
 		</dict>
 		<key>ig-platform-id</key>
-		<string>0x591E0000</string>
+		<string>0x191E0000</string>
 	</dict>
 	<key>KernelAndKextPatches</key>
 	<dict>
+		<key>AppleIntelCPUPM</key>
+		<false/>
 		<key>AppleRTC</key>
 		<true/>
 		<key>DellSMBIOSPatch</key>
@@ -588,22 +610,6 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Disable panic kext logging on 10.13 release kernel (credit vit9696)</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				igKEwHRE
-				</data>
-				<key>MatchOS</key>
-				<string>10.13.x</string>
-				<key>Replace</key>
-				<data>
-				igKEwOtE
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>Disable panic kext logging on 10.14 release kernel (credit vit9696)</string>
 				<key>Disabled</key>
 				<false/>
@@ -621,42 +627,6 @@
 		</array>
 		<key>KextsToPatch</key>
 		<array>
-			<dict>
-				<key>Comment</key>
-				<string>Boot graphics glitch 10.13.x (IGPUs)</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				AQAAdSI=
-				</data>
-				<key>InfoPlistPatch</key>
-				<false/>
-				<key>Name</key>
-				<string>com.apple.iokit.IOGraphicsFamily</string>
-				<key>Replace</key>
-				<data>
-				AQAA6yI=
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Remove 15 port limit completely 10.14 B2</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				g/sPD4MDBQAA
-				</data>
-				<key>InfoPlistPatch</key>
-				<false/>
-				<key>Name</key>
-				<string>com.apple.driver.usb.AppleUSBXHCI</string>
-				<key>Replace</key>
-				<data>
-				g/saD4MDBQAA
-				</data>
-			</dict>
 			<dict>
 				<key>Comment</key>
 				<string>Zeroing 10ec0261 codec (patched by AppleHDA Patcher.app)</string>
@@ -713,7 +683,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Patching 11d41984 with 10ec0255 codec (patched by AppleHDA Patcher.app)</string>
+				<string>Patching 11d41984 with 10ec0225 codec (patched by AppleHDA Patcher.app)</string>
 				<key>Disabled</key>
 				<false/>
 				<key>Find</key>
@@ -726,7 +696,7 @@
 				<string>AppleHDA</string>
 				<key>Replace</key>
 				<data>
-				VQLsEA==
+				JQLsEA==
 				</data>
 			</dict>
 		</array>
@@ -740,55 +710,20 @@
 		<key>MLB</key>
 		<string></string>
 		<key>ROM</key>
-		<data>
-		</data>
+		<string>UseMacAddr0</string>
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
-		<key>BiosReleaseDate</key>
-		<string>09/17/2018</string>
 		<key>BiosVendor</key>
 		<string>Apple Inc.</string>
-		<key>BiosVersion</key>
-		<string></string>
-		<key>Board-ID</key>
-		<string></string>
-		<key>BoardManufacturer</key>
-		<string>Apple Inc.</string>
-		<key>BoardSerialNumber</key>
-		<string></string>
-		<key>BoardType</key>
-		<integer>10</integer>
-		<key>BoardVersion</key>
-		<string>1.0</string>
 		<key>ChassisAssetTag</key>
 		<string>MacBook-Aluminum</string>
-		<key>ChassisManufacturer</key>
-		<string>Apple Inc.</string>
-		<key>ChassisType</key>
-		<string>0x09</string>
-		<key>EfiVersion</key>
-		<string></string>
 		<key>Family</key>
 		<string>MacBook Pro</string>
-		<key>FirmwareFeatures</key>
-		<string></string>
-		<key>FirmwareFeaturesMask</key>
-		<string></string>
-		<key>LocationInChassis</key>
-		<string>Part Component</string>
-		<key>Manufacturer</key>
-		<string>Apple Inc.</string>
 		<key>Mobile</key>
 		<true/>
-		<key>PlatformFeature</key>
-		<string>0x1A</string>
 		<key>ProductName</key>
 		<string>MacBookPro14,1</string>
-		<key>SerialNumber</key>
-		<string></string>
-		<key>SmUUID</key>
-		<string></string>
 		<key>Version</key>
 		<string>1.0</string>
 	</dict>
