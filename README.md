@@ -31,7 +31,7 @@ Create a Bootable USB for the OSX, So refer to the Guide by RehabMan [[Guide] Bo
 * The touchpad works After Installing VoodooPs2Controller.kext, After that Install ApplePS2SmartTouchpad.kext in order to recognise the touchpad as native one, And after that all gestures will work fine.
 
 ### USB
-* To Raise the Port Limit, We're using USBInjectAll.kext from RehabMan. Currently I haven't Created Custom SSDT to raise the port limit yet.. but I'll update it here soon.
+* To Raise the Port Limit, We're using USBInjectAll.kext from RehabMan. You can also Find Patched SSDT-UIAC under ACPI/Patched Folder.
 * SD Card Reader is not supported and be disabled to save power.
 
 ### Wi-Fi
