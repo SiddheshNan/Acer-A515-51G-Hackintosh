@@ -9,7 +9,7 @@ Acer E515-51G Hackintosh Guide for MacOS Mojave, And High Sierra.
 Create a Bootable USB for the OSX, So refer to the Guide by RehabMan [[Guide] Booting the OS X installer on LAPTOPS with Clover](https://www.tonymacx86.com/el-capitan-laptop-support/148093-guide-booting-os-x-installer-laptops-clover.html).
 
 ### Audio
-* The Sound card this Laptop uses is `Realtek ALC255`, which is drived by `AppleALC` on layout-id 3 (On High Sierra and Earlier) But Since Mojave 10.14 layout-id 3 is depricated, So you have to use layout-id 4; injection information is located in `config.plist`. After that You have to Install [Patched_AppleHDA](https://github.com/Siddhesh9146/Acer-E515-51G-Hackintosh/tree/master/AppleHDA_ALC225_Patched) With its HDAEnabler & CodecCommander Kext.
+* The Sound card this Laptop uses is `Realtek ALC255`, which is drived by `AppleALC` on layout-id 3.
 * If headphones are not working, please see [ALCPlugFix](https://github.com/Siddhesh9146/Acer-E515-51G-Hackintosh/tree/master/ALCPlugFix). You may need to replug headphone after every boot.
 
     
@@ -22,7 +22,7 @@ Create a Bootable USB for the OSX, So refer to the Guide by RehabMan [[Guide] Bo
 * The Ethernet is `8411B`, and you'll need RealtekRTL8111.kext to enable Ethernet.
 
 ### Graphics
-* The iGPU is `Intel UHD Graphics 620`, and its enabled using `Ig-Platform-id=0x591E0000`
+* The iGPU is `Intel UHD Graphics 620`, and its enabled using `Ig-Platform-id=0x191E0000`
 * For HDMI Implementation we need patched the FrameBuffer & HDMI audio, I have already patched it in Config.plist
 * The discrete graphics' name is `NVIDIA GeForce MX150`, and its disabled becuase macOS doesn't support Optimus technology. Plus Battery Life if Improved to 6-7 hours of Backup.
 * Native brightness hotkey support; using DSDT.aml patched from RehabMan's [[Guide] Patching DSDT/SSDT for LAPTOP backlight control](https://www.tonymacx86.com/threads/guide-patching-dsdt-ssdt-for-laptop-backlight-control.152659/).
