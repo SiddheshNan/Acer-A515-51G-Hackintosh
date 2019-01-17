@@ -406,7 +406,7 @@
 		<key>Audio</key>
 		<dict>
 			<key>Inject</key>
-			<integer>4</integer>
+			<integer>3</integer>
 			<key>ResetHDA</key>
 			<false/>
 		</dict>
@@ -459,6 +459,10 @@
 				<data>
 				AAAwAQ==
 				</data>
+				<key>framebuffer-unifiedmem</key>
+				<data>
+				AAAAgA==
+				</data>
 				<key>hda-gfx</key>
 				<string>onboard-1</string>
 			</dict>
@@ -467,7 +471,7 @@
 				<key>hda-gfx</key>
 				<string>onboard-1</string>
 				<key>layout-id</key>
-				<integer>4</integer>
+				<integer>3</integer>
 			</dict>
 		</dict>
 		<key>USB</key>
@@ -626,80 +630,7 @@
 			</dict>
 		</array>
 		<key>KextsToPatch</key>
-		<array>
-			<dict>
-				<key>Comment</key>
-				<string>Zeroing 10ec0261 codec (patched by AppleHDA Patcher.app)</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				YQLsEA==
-				</data>
-				<key>InfoPlistPatch</key>
-				<false/>
-				<key>Name</key>
-				<string>AppleHDA</string>
-				<key>Replace</key>
-				<data>
-				AAAAAA==
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Zeroing 10ec0262 codec (patched by AppleHDA Patcher.app)</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				YgLsEA==
-				</data>
-				<key>InfoPlistPatch</key>
-				<false/>
-				<key>Name</key>
-				<string>AppleHDA</string>
-				<key>Replace</key>
-				<data>
-				AAAAAA==
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Zeroing 10ec0885 codec (patched by AppleHDA Patcher.app)</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				hQjsEA==
-				</data>
-				<key>InfoPlistPatch</key>
-				<false/>
-				<key>Name</key>
-				<string>AppleHDA</string>
-				<key>Replace</key>
-				<data>
-				AAAAAA==
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Patching 11d41984 with 10ec0225 codec (patched by AppleHDA Patcher.app)</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				hBnUEQ==
-				</data>
-				<key>InfoPlistPatch</key>
-				<false/>
-				<key>Name</key>
-				<string>AppleHDA</string>
-				<key>Replace</key>
-				<data>
-				JQLsEA==
-				</data>
-			</dict>
-		</array>
+		<array/>
 	</dict>
 	<key>RtVariables</key>
 	<dict>
