@@ -5,18 +5,18 @@
  * 
  * Disassembling to non-symbolic legacy ASL operators
  *
- * Disassembly of DSDT.aml, Thu Jan 17 20:24:06 2019
+ * Disassembly of DSDT.aml, Fri Jan 18 14:39:53 2019
  *
  * Original Table Header:
  *     Signature        "DSDT"
- *     Length           0x00020708 (132872)
+ *     Length           0x00020927 (133415)
  *     Revision         0x02
- *     Checksum         0x48
+ *     Checksum         0xDA
  *     OEM ID           "ACRSYS"
  *     OEM Table ID     "ACRPRDCT"
  *     OEM Revision     0x00000000 (0)
- *     Compiler ID      "1025"
- *     Compiler Version 0x00040000 (262144)
+ *     Compiler ID      "INTL"
+ *     Compiler Version 0x20180427 (538444839)
  */
 DefinitionBlock ("", "DSDT", 2, "ACRSYS", "ACRPRDCT", 0x00000000)
 {
@@ -75,24 +75,29 @@ DefinitionBlock ("", "DSDT", 2, "ACRSYS", "ACRPRDCT", 0x00000000)
     External (_SB_.PCI0.PEG0, DeviceObj)    // (from opcode)
     External (_SB_.PCI0.PEG0.HPME, MethodObj)    // 0 Arguments (from opcode)
     External (_SB_.PCI0.PEG0.PEGP, DeviceObj)    // (from opcode)
+    External (_SB_.PCI0.PEG0.PEGP._OFF, MethodObj)    // 0 Arguments (from opcode)
+    External (_SB_.PCI0.PEG0.PEGP._ON_, MethodObj)    // 0 Arguments (from opcode)
     External (_SB_.PCI0.PEG1, DeviceObj)    // (from opcode)
     External (_SB_.PCI0.PEG1.HPME, MethodObj)    // 0 Arguments (from opcode)
     External (_SB_.PCI0.PEG2, DeviceObj)    // (from opcode)
     External (_SB_.PCI0.PEG2.HPME, MethodObj)    // 0 Arguments (from opcode)
-    External (_SB_.PCI0.RP05.PWRG, UnknownObj)    // Warning: Unknown object
-    External (_SB_.PCI0.RP05.RSTG, UnknownObj)    // Warning: Unknown object
-    External (_SB_.PCI0.RP05.SCLK, UnknownObj)    // Warning: Unknown object
-    External (_SB_.PCI0.RP09.PWRG, UnknownObj)    // Warning: Unknown object
-    External (_SB_.PCI0.RP09.RSTG, UnknownObj)    // Warning: Unknown object
-    External (_SB_.PCI0.RP09.SCLK, UnknownObj)    // Warning: Unknown object
-    External (_SB_.PCI0.RP13.PWRG, UnknownObj)    // Warning: Unknown object
-    External (_SB_.PCI0.RP13.RSTG, UnknownObj)    // Warning: Unknown object
-    External (_SB_.PCI0.RP13.SCLK, UnknownObj)    // Warning: Unknown object
-    External (_SB_.PCI0.RP17.PWRG, UnknownObj)    // Warning: Unknown object
-    External (_SB_.PCI0.RP17.RSTG, UnknownObj)    // Warning: Unknown object
-    External (_SB_.PCI0.RP17.SCLK, UnknownObj)    // Warning: Unknown object
+    External (_SB_.PCI0.RP01.PXSX._OFF, MethodObj)    // 0 Arguments (from opcode)
+    External (_SB_.PCI0.RP01.PXSX._ON_, MethodObj)    // 0 Arguments (from opcode)
+    External (_SB_.PCI0.RP05.PWRG, UnknownObj)    // (from opcode)
+    External (_SB_.PCI0.RP05.RSTG, UnknownObj)    // (from opcode)
+    External (_SB_.PCI0.RP05.SCLK, UnknownObj)    // (from opcode)
+    External (_SB_.PCI0.RP09.PWRG, UnknownObj)    // (from opcode)
+    External (_SB_.PCI0.RP09.RSTG, UnknownObj)    // (from opcode)
+    External (_SB_.PCI0.RP09.SCLK, UnknownObj)    // (from opcode)
+    External (_SB_.PCI0.RP13.PWRG, UnknownObj)    // (from opcode)
+    External (_SB_.PCI0.RP13.RSTG, UnknownObj)    // (from opcode)
+    External (_SB_.PCI0.RP13.SCLK, UnknownObj)    // (from opcode)
+    External (_SB_.PCI0.RP17.PWRG, UnknownObj)    // (from opcode)
+    External (_SB_.PCI0.RP17.RSTG, UnknownObj)    // (from opcode)
+    External (_SB_.PCI0.RP17.SCLK, UnknownObj)    // (from opcode)
     External (_SB_.PCI0.SAT0.SDSM, MethodObj)    // 4 Arguments (from opcode)
-    External (_SB_.PCI0.WMID.FEBC, UnknownObj)    // Warning: Unknown object
+    External (_SB_.PCI0.WMID, UnknownObj)    // (from opcode)
+    External (_SB_.PCI0.WMID.FEBC, UnknownObj)    // (from opcode)
     External (_SB_.PCI0.XHC_.DUAM, MethodObj)    // 0 Arguments (from opcode)
     External (_SB_.PCI0.XHC_.PS0X, MethodObj)    // 0 Arguments (from opcode)
     External (_SB_.PCI0.XHC_.PS3X, MethodObj)    // 0 Arguments (from opcode)
@@ -106,7 +111,7 @@ DefinitionBlock ("", "DSDT", 2, "ACRSYS", "ACRPRDCT", 0x00000000)
     External (_TZ_.TZ01, DeviceObj)    // (from opcode)
     External (AAMC, DeviceObj)    // (from opcode)
     External (ALSE, UnknownObj)    // (from opcode)
-    External (BNUM, UnknownObj)    // (from opcode)    // Conflicts with a later declaration
+    External (BNUM, UnknownObj)    // (from opcode)
     External (BRTL, UnknownObj)    // (from opcode)
     External (D1F0, UnknownObj)    // (from opcode)
     External (D1F1, UnknownObj)    // (from opcode)
@@ -1319,7 +1324,7 @@ DefinitionBlock ("", "DSDT", 2, "ACRSYS", "ACRPRDCT", 0x00000000)
         MDEN,   8
     }
 
-    OperationRegion (OGNS, SystemMemory, 0x8AF6AFD8, 0x0000000F)
+    OperationRegion (OGNS, SystemMemory, 0x8AF6AFD8, 0x0F)
     Field (OGNS, AnyAcc, Lock, Preserve)
     {
         OG00,   8, 
@@ -3431,6 +3436,11 @@ DefinitionBlock ("", "DSDT", 2, "ACRSYS", "ACRPRDCT", 0x00000000)
                     Name (_ADR, 0x00050000)  // _ADR: Address
                 }
             }
+
+            Device (IMEI)
+            {
+                Name (_ADR, 0x00160000)  // _ADR: Address
+            }
         }
     }
 
@@ -4651,7 +4661,18 @@ DefinitionBlock ("", "DSDT", 2, "ACRSYS", "ACRPRDCT", 0x00000000)
         Device (LPCB)
         {
             Name (_ADR, 0x001F0000)  // _ADR: Address
-            
+            Method (_DSM, 4, Serialized)  // _DSM: Device-Specific Method
+            {
+                If (PCIC (Arg0))
+                {
+                    Return (PCID (Arg0, Arg1, Arg2, Arg3))
+                }
+
+                Return (Buffer (One)
+                {
+                     0x00                                           
+                })
+            }
 
             OperationRegion (LPC, PCI_Config, Zero, 0x0100)
             Field (LPC, AnyAcc, NoLock, Preserve)
@@ -4670,15 +4691,6 @@ DefinitionBlock ("", "DSDT", 2, "ACRSYS", "ACRPRDCT", 0x00000000)
                     ,   2, 
                 ESPI,   1
             }
-            Method (_DSM, 4, NotSerialized)
-            {
-                If (LEqual (Arg2, Zero)) { Return (Buffer() { 0x03 } ) }
-                Return (Package()
-                {
-                    "compatible", "pci8086,9cc1",
-                })
-            }
-            
         }
 
         Device (PPMC)
@@ -5250,8 +5262,6 @@ DefinitionBlock ("", "DSDT", 2, "ACRSYS", "ACRPRDCT", 0x00000000)
                 PMES,   1
             }
 
-            
-
             Method (_DSW, 3, NotSerialized)  // _DSW: Device Sleep Wake
             {
                 Store (Arg0, PMEE)
@@ -5270,7 +5280,15 @@ DefinitionBlock ("", "DSDT", 2, "ACRSYS", "ACRPRDCT", 0x00000000)
                     Notify (GLAN, 0x02)
                 }
             }
-            Method(_PRW) { Return(Package() { 0x6D, 0 }) }
+
+            Method (_PRW, 0, NotSerialized)  // _PRW: Power Resources for Wake
+            {
+                Return (Package (0x02)
+                {
+                    0x6D, 
+                    Zero
+                })
+            }
         }
     }
 
@@ -5305,8 +5323,6 @@ DefinitionBlock ("", "DSDT", 2, "ACRSYS", "ACRPRDCT", 0x00000000)
             }
 
             Name (XFLT, Zero)
-            
-
             Method (_S3D, 0, NotSerialized)  // _S3D: S3 Device State
             {
                 Return (0x03)
@@ -5338,8 +5354,6 @@ DefinitionBlock ("", "DSDT", 2, "ACRSYS", "ACRPRDCT", 0x00000000)
                     Return (0x03)
                 }
             }
-
-            
 
             Method (_DSW, 3, NotSerialized)  // _DSW: Device Sleep Wake
             {
@@ -5655,19 +5669,50 @@ DefinitionBlock ("", "DSDT", 2, "ACRSYS", "ACRPRDCT", 0x00000000)
                     }
                 }
             }
-            Method(_PRW) { Return(Package() { 0x6D, 0 }) }
-            Method (_DSM, 4, NotSerialized)
+
+            Method (_PRW, 0, NotSerialized)  // _PRW: Power Resources for Wake
             {
-                If (LEqual (Arg2, Zero)) { Return (Buffer() { 0x03 } ) }
-                Return (Package()
+                Return (Package (0x02)
                 {
-                    "subsystem-id", Buffer() { 0x70, 0x72, 0x00, 0x00 },
-                    "subsystem-vendor-id", Buffer() { 0x86, 0x80, 0x00, 0x00 },
-                    "AAPL,current-available", 2100,
-                    "AAPL,current-extra", 2200,
-                    "AAPL,current-extra-in-sleep", 1600,
-                    "AAPL,device-internal", 0x02,
-                    "AAPL,max-port-current-in-sleep", 2100,
+                    0x6D, 
+                    Zero
+                })
+            }
+
+            Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
+            {
+                If (LEqual (Arg2, Zero))
+                {
+                    Return (Buffer (One)
+                    {
+                         0x03                                           
+                    })
+                }
+
+                Return (Package (0x0E)
+                {
+                    "subsystem-id", 
+                    Buffer (0x04)
+                    {
+                         0x70, 0x72, 0x00, 0x00                         
+                    }, 
+
+                    "subsystem-vendor-id", 
+                    Buffer (0x04)
+                    {
+                         0x86, 0x80, 0x00, 0x00                         
+                    }, 
+
+                    "AAPL,current-available", 
+                    0x0834, 
+                    "AAPL,current-extra", 
+                    0x0898, 
+                    "AAPL,current-extra-in-sleep", 
+                    0x0640, 
+                    "AAPL,device-internal", 
+                    0x02, 
+                    "AAPL,max-port-current-in-sleep", 
+                    0x0834
                 })
             }
         }
@@ -5959,8 +6004,6 @@ DefinitionBlock ("", "DSDT", 2, "ACRSYS", "ACRPRDCT", 0x00000000)
                 }
             }
 
-            
-
             Method (_DSW, 3, NotSerialized)  // _DSW: Device Sleep Wake
             {
                 Store (Arg0, PMEE)
@@ -5980,7 +6023,15 @@ DefinitionBlock ("", "DSDT", 2, "ACRSYS", "ACRPRDCT", 0x00000000)
                     Notify (XDCI, 0x02)
                 }
             }
-            Method(_PRW) { Return(Package() { 0x6D, 0 }) }
+
+            Method (_PRW, 0, NotSerialized)  // _PRW: Power Resources for Wake
+            {
+                Return (Package (0x02)
+                {
+                    0x6D, 
+                    Zero
+                })
+            }
         }
     }
 
@@ -6009,8 +6060,6 @@ DefinitionBlock ("", "DSDT", 2, "ACRSYS", "ACRPRDCT", 0x00000000)
             {
                 Store (Arg0, PMEE)
             }
-
-            
 
             Method (GPEH, 0, NotSerialized)
             {
@@ -6078,32 +6127,172 @@ DefinitionBlock ("", "DSDT", 2, "ACRSYS", "ACRPRDCT", 0x00000000)
                 }
             }
 
-            
+            Method (_DSM, 4, Serialized)  // _DSM: Device-Specific Method
+            {
+                ADBG ("HDAS _DSM")
+                If (PCIC (Arg0))
+                {
+                    Return (PCID (Arg0, Arg1, Arg2, Arg3))
+                }
+
+                If (LEqual (Arg0, ToUUID ("a69f886e-6ceb-4594-a41f-7b5dce24c553")))
+                {
+                    Switch (ToInteger (Arg2))
+                    {
+                        Case (Zero)
+                        {
+                            Return (Buffer (One)
+                            {
+                                 0x0F                                           
+                            })
+                        }
+                        Case (One)
+                        {
+                            ADBG ("_DSM Fun 1 NHLT")
+                            Return (NBUF)
+                        }
+                        Case (0x02)
+                        {
+                            ADBG ("_DSM Fun 2 FMSK")
+                            Return (ADFM)
+                        }
+                        Case (0x03)
+                        {
+                            ADBG ("_DSM Fun 3 PPMS")
+                            If (CondRefOf (\_SB.PCI0.HDAS.PPMS))
+                            {
+                                Return (PPMS (Arg3))
+                            }
+
+                            Return (Zero)
+                        }
+                        Default
+                        {
+                            ADBG ("_DSM Fun NOK")
+                            Return (Buffer (One)
+                            {
+                                 0x00                                           
+                            })
+                        }
+
+                    }
+                }
+
+                If (CondRefOf (HIWC))
+                {
+                    If (HIWC (Arg0))
+                    {
+                        If (CondRefOf (HIDW))
+                        {
+                            Return (HIDW (Arg0, Arg1, Arg2, Arg3))
+                        }
+                    }
+                }
+
+                Method (HIDW, 4, Serialized)
+                {
+                    If (LEqual (Arg0, ToUUID ("1730e71d-e5dd-4a34-be57-4d76b6a2fe37")))
+                    {
+                        If (LEqual (Arg2, Zero))
+                        {
+                            If (LEqual (Arg1, Zero))
+                            {
+                                Return (Buffer (One)
+                                {
+                                     0x03                                           
+                                })
+                            }
+                            Else
+                            {
+                                Return (Zero)
+                            }
+                        }
+
+                        If (LEqual (Arg2, One))
+                        {
+                            Switch (ToInteger (DerefOf (Index (Arg3, Zero))))
+                            {
+                                Case (Zero)
+                                {
+                                }
+                                Case (One)
+                                {
+                                }
+                                Case (0x02)
+                                {
+                                }
+                                Case (0x03)
+                                {
+                                }
+
+                            }
+
+                            Return (Zero)
+                        }
+                        Else
+                        {
+                            Return (Zero)
+                        }
+                    }
+                    Else
+                    {
+                        Return (Buffer (One)
+                        {
+                             0x00                                           
+                        })
+                    }
+                }
+
+                Method (HIWC, 1, NotSerialized)
+                {
+                    If (LEqual (Arg0, ToUUID ("1730e71d-e5dd-4a34-be57-4d76b6a2fe37")))
+                    {
+                        Return (One)
+                    }
+
+                    Return (Zero)
+                }
+
+                ADBG ("_DSM UUID NOK")
+                Return (Buffer (One)
+                {
+                     0x00                                           
+                })
+            }
+
             Device (BUS0)
             {
-                Name (_CID, "smbus")
-                Name (_ADR, Zero)
+                Name (_CID, "smbus")  // _CID: Compatible ID
+                Name (_ADR, Zero)  // _ADR: Address
                 Device (DVL0)
                 {
-                    Name (_ADR, 0x57)
-                    Name (_CID, "diagsvault")
-                    Method (_DSM, 4, NotSerialized)
+                    Name (_ADR, 0x57)  // _ADR: Address
+                    Name (_CID, "diagsvault")  // _CID: Compatible ID
+                    Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
                     {
-                        If (LEqual (Arg2, Zero)) { Return (Buffer() { 0x03 } ) }
-                        Return (Package() { "address", 0x57 })
+                        If (LEqual (Arg2, Zero))
+                        {
+                            Return (Buffer (One)
+                            {
+                                 0x03                                           
+                            })
+                        }
+
+                        Return (Package (0x02)
+                        {
+                            "address", 
+                            0x57
+                        })
                     }
                 }
             }
-            Method(_PRW) { Return(Package() { 0x6D, 0 }) }
-            Method (_DSM, 4, NotSerialized)
+
+            Method (_PRW, 0, NotSerialized)  // _PRW: Power Resources for Wake
             {
-                If (LEqual (Arg2, Zero)) { Return (Buffer() { 0x03 } ) }
-                Return (Package()
+                Return (Package (0x02)
                 {
-                    "layout-id", Buffer() { 3, 0x00, 0x00, 0x00 },
-                    "hda-gfx", Buffer() { "onboard-1" },
-                    "PinConfigurations", Buffer() { },
-                    //"MaximumBootBeepVolume", 77,
+                    0x6D, 
+                    Zero
                 })
             }
         }
@@ -9654,7 +9843,7 @@ DefinitionBlock ("", "DSDT", 2, "ACRSYS", "ACRPRDCT", 0x00000000)
             {
                 Store (LTRF, LTRZ)
                 Store (PMLF, LMSL)
-                Store (PNLF, LNSL)
+                Store (\PNLF, LNSL)
                 Store (OBFF, OBFZ)
             }
 
@@ -14341,7 +14530,15 @@ DefinitionBlock ("", "DSDT", 2, "ACRSYS", "ACRPRDCT", 0x00000000)
                     LPD3 (SB1A)
                 }
             }
-            Method(_PRW) { Return(Package() { 0x6D, 0 }) }
+
+            Method (_PRW, 0, NotSerialized)  // _PRW: Power Resources for Wake
+            {
+                Return (Package (0x02)
+                {
+                    0x6D, 
+                    Zero
+                })
+            }
         }
     }
 
@@ -16140,33 +16337,6 @@ DefinitionBlock ("", "DSDT", 2, "ACRSYS", "ACRPRDCT", 0x00000000)
 
     Scope (_SB.PCI0)
     {
-        Device (HECI)
-        {
-            Name (_ADR, 0x00160000)  // _ADR: Address
-            Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
-            {
-                If (PCIC (Arg0))
-                {
-                    Return (PCID (Arg0, Arg1, Arg2, Arg3))
-                }
-
-                If (CondRefOf (HIWC))
-                {
-                    If (HIWC (Arg0))
-                    {
-                        If (CondRefOf (HIDW))
-                        {
-                            Return (HIDW (Arg0, Arg1, Arg2, Arg3))
-                        }
-                    }
-                }
-
-                Return (Buffer (One)
-                {
-                     0x00                                           
-                })
-            }
-        }
     }
 
     Scope (_SB.PCI0.LPCB)
@@ -16187,21 +16357,17 @@ DefinitionBlock ("", "DSDT", 2, "ACRSYS", "ACRPRDCT", 0x00000000)
         {
             Name (_HID, EisaId ("PNP0103"))  // _HID: Hardware ID
             Name (_UID, Zero)  // _UID: Unique ID
-            Name (BUF0, ResourceTemplate()
-{
-    IRQNoFlags() { 0, 8, 11, 15 }
-
+            Name (BUF0, ResourceTemplate ()
+            {
+                IRQNoFlags ()
+                    {0,8,11,15}
                 Memory32Fixed (ReadWrite,
                     0xFED00000,         // Address Base
                     0x00000400,         // Address Length
-                    _Y2A)
+                    )
             })
-
-            
-
-            
-            Name (_STA, 0x0F)
-            Method (_CRS, 0, NotSerialized)
+            Name (_STA, 0x0F)  // _STA: Status
+            Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
             {
                 Return (BUF0)
             }
@@ -16314,7 +16480,6 @@ DefinitionBlock ("", "DSDT", 2, "ACRSYS", "ACRPRDCT", 0x00000000)
                     0x01,               // Alignment
                     0x02,               // Length
                     )
-                
             })
         }
 
@@ -16505,7 +16670,6 @@ DefinitionBlock ("", "DSDT", 2, "ACRSYS", "ACRPRDCT", 0x00000000)
                     0x01,               // Alignment
                     0x02,               // Length
                     )
-                
             })
         }
 
@@ -16526,7 +16690,6 @@ DefinitionBlock ("", "DSDT", 2, "ACRSYS", "ACRPRDCT", 0x00000000)
                     0x10,               // Alignment
                     0x04,               // Length
                     )
-                
             })
         }
 
@@ -17588,10 +17751,27 @@ DefinitionBlock ("", "DSDT", 2, "ACRSYS", "ACRPRDCT", 0x00000000)
 
     Method (_PTS, 1, NotSerialized)  // _PTS: Prepare To Sleep
     {
-        External(\_SB.PCI0.RP01.PXSX._ON, MethodObj)
-If (CondRefOf(\_SB.PCI0.RP01.PXSX._ON)) { \_SB.PCI0.RP01.PXSX._ON() }
-If (LNotEqual(Arg0,5)) {
-Store (Zero, P80D)
+        If (CondRefOf (\_SB.PCI0.RP01.PXSX._ON))
+        {
+            \_SB.PCI0.RP01.PXSX._ON ()
+        }
+
+        If (CondRefOf (\_SB.PCI0.PEG0.PEGP._ON))
+        {
+            \_SB.PCI0.PEG0.PEGP._ON ()
+        }
+
+        If (CondRefOf (\_SB.PCI0.RP01.PXSX._ON))
+        {
+            \_SB.PCI0.RP01.PXSX._ON ()
+        }
+
+        If (CondRefOf (\_SB.PCI0.PEG0.PEGP._ON))
+        {
+            \_SB.PCI0.PEG0.PEGP._ON ()
+        }
+
+        Store (Zero, P80D)
         P8XH (Zero, Arg0)
         If (LEqual (Arg0, One))
         {
@@ -17670,14 +17850,16 @@ Store (Zero, P80D)
             \_SB.PCI0.LPCB.ECFG (Zero)
             Store (Zero, \_PR.CPPC)
         }
-}
-
     }
 
     Method (_WAK, 1, Serialized)  // _WAK: Wake
     {
-        If (LOr(LLess(Arg0,1),LGreater(Arg0,5))) { Store(3,Arg0) }
-P8XH (One, 0xAB)
+        If (LOr (LLess (Arg0, One), LGreater (Arg0, 0x05)))
+        {
+            Store (0x03, Arg0)
+        }
+
+        P8XH (One, 0xAB)
         If (LEqual (Arg0, One))
         {
             H2OP (0xE1)
@@ -17917,9 +18099,27 @@ P8XH (One, 0xAB)
             Notify (\_SB.PCI0.LPCB.LID0, 0x80)
         }
 
-        External(\_SB.PCI0.RP01.PXSX._OFF, MethodObj)
-If (CondRefOf(\_SB.PCI0.RP01.PXSX._OFF)) { \_SB.PCI0.RP01.PXSX._OFF() }
-Return (Package (0x02)
+        If (CondRefOf (\_SB.PCI0.PEG0.PEGP._OFF))
+        {
+            \_SB.PCI0.PEG0.PEGP._OFF ()
+        }
+
+        If (CondRefOf (\_SB.PCI0.RP01.PXSX._OFF))
+        {
+            \_SB.PCI0.RP01.PXSX._OFF ()
+        }
+
+        If (CondRefOf (\_SB.PCI0.PEG0.PEGP._OFF))
+        {
+            \_SB.PCI0.PEG0.PEGP._OFF ()
+        }
+
+        If (CondRefOf (\_SB.PCI0.RP01.PXSX._OFF))
+        {
+            \_SB.PCI0.RP01.PXSX._OFF ()
+        }
+
+        Return (Package (0x02)
         {
             Zero, 
             Zero
@@ -18260,7 +18460,7 @@ Return (Package (0x02)
                     Store (0x07D9, OSYS)
                 }
 
-                If(LOr(_OSI("Darwin"),_OSI("Windows 2012")))
+                If (LOr (_OSI ("Darwin"), _OSI ("Windows 2012")))
                 {
                     Store (0x07DC, OSYS)
                 }
@@ -18485,13 +18685,13 @@ Return (Package (0x02)
                     0x0000000000000000, // Range Maximum
                     0x0000000000000000, // Translation Offset
                     0x0000000000000001, // Length
-                    ,, _Y2B, AddressRangeMemory, TypeStatic)
+                    ,, _Y2A, AddressRangeMemory, TypeStatic)
             })
             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
             {
-                CreateQWordField (RBUF, \_SB.EPC._Y2B._MIN, EMIN)  // _MIN: Minimum Base Address
-                CreateQWordField (RBUF, \_SB.EPC._Y2B._MAX, EMAX)  // _MAX: Maximum Base Address
-                CreateQWordField (RBUF, \_SB.EPC._Y2B._LEN, ELEN)  // _LEN: Length
+                CreateQWordField (RBUF, \_SB.EPC._Y2A._MIN, EMIN)  // _MIN: Minimum Base Address
+                CreateQWordField (RBUF, \_SB.EPC._Y2A._MAX, EMAX)  // _MAX: Maximum Base Address
+                CreateQWordField (RBUF, \_SB.EPC._Y2A._LEN, ELEN)  // _LEN: Length
                 Store (\_PR.EMNA, EMIN)
                 Store (\_PR.ELNG, ELEN)
                 Subtract (Add (\_PR.EMNA, \_PR.ELNG), One, EMAX)
@@ -20600,6 +20800,10 @@ Return (Package (0x02)
                 Memory32Fixed (ReadWrite,
                     0x00000000,         // Address Base
                     0x00008000,         // Address Length
+                    _Y2B)
+                Memory32Fixed (ReadWrite,
+                    0x00000000,         // Address Base
+                    0x00001000,         // Address Length
                     _Y2C)
                 Memory32Fixed (ReadWrite,
                     0x00000000,         // Address Base
@@ -20607,12 +20811,8 @@ Return (Package (0x02)
                     _Y2D)
                 Memory32Fixed (ReadWrite,
                     0x00000000,         // Address Base
-                    0x00001000,         // Address Length
-                    _Y2E)
-                Memory32Fixed (ReadWrite,
-                    0x00000000,         // Address Base
                     0x00000000,         // Address Length
-                    _Y2F)
+                    _Y2E)
                 Memory32Fixed (ReadWrite,
                     0xFED20000,         // Address Base
                     0x00020000,         // Address Length
@@ -20640,32 +20840,32 @@ Return (Package (0x02)
                 Memory32Fixed (ReadWrite,
                     0x00000000,         // Address Base
                     0x00000000,         // Address Length
-                    _Y30)
+                    _Y2F)
                 Memory32Fixed (ReadWrite,
                     0x00000000,         // Address Base
                     0x00000000,         // Address Length
-                    _Y31)
+                    _Y30)
             })
             Method (_CRS, 0, Serialized)  // _CRS: Current Resource Settings
             {
-                CreateDWordField (BUF0, \_SB.PCI0.PDRC._Y2C._BAS, MBR0)  // _BAS: Base Address
+                CreateDWordField (BUF0, \_SB.PCI0.PDRC._Y2B._BAS, MBR0)  // _BAS: Base Address
                 Store (GMHB (), MBR0)
-                CreateDWordField (BUF0, \_SB.PCI0.PDRC._Y2D._BAS, DBR0)  // _BAS: Base Address
+                CreateDWordField (BUF0, \_SB.PCI0.PDRC._Y2C._BAS, DBR0)  // _BAS: Base Address
                 Store (GDMB (), DBR0)
-                CreateDWordField (BUF0, \_SB.PCI0.PDRC._Y2E._BAS, EBR0)  // _BAS: Base Address
+                CreateDWordField (BUF0, \_SB.PCI0.PDRC._Y2D._BAS, EBR0)  // _BAS: Base Address
                 Store (GEPB (), EBR0)
-                CreateDWordField (BUF0, \_SB.PCI0.PDRC._Y2F._BAS, XBR0)  // _BAS: Base Address
+                CreateDWordField (BUF0, \_SB.PCI0.PDRC._Y2E._BAS, XBR0)  // _BAS: Base Address
                 Store (GPCB (), XBR0)
-                CreateDWordField (BUF0, \_SB.PCI0.PDRC._Y2F._LEN, XSZ0)  // _LEN: Length
+                CreateDWordField (BUF0, \_SB.PCI0.PDRC._Y2E._LEN, XSZ0)  // _LEN: Length
                 Store (GPCL (), XSZ0)
-                CreateDWordField (BUF0, \_SB.PCI0.PDRC._Y30._BAS, SXRA)  // _BAS: Base Address
+                CreateDWordField (BUF0, \_SB.PCI0.PDRC._Y2F._BAS, SXRA)  // _BAS: Base Address
                 Store (SXRB, SXRA)
-                CreateDWordField (BUF0, \_SB.PCI0.PDRC._Y30._LEN, SXRL)  // _LEN: Length
+                CreateDWordField (BUF0, \_SB.PCI0.PDRC._Y2F._LEN, SXRL)  // _LEN: Length
                 Store (SXRS, SXRL)
                 If (LNot (HPTE))
                 {
-                    CreateDWordField (BUF0, \_SB.PCI0.PDRC._Y31._BAS, HBAS)  // _BAS: Base Address
-                    CreateDWordField (BUF0, \_SB.PCI0.PDRC._Y31._LEN, HLEN)  // _LEN: Length
+                    CreateDWordField (BUF0, \_SB.PCI0.PDRC._Y30._BAS, HBAS)  // _BAS: Base Address
+                    CreateDWordField (BUF0, \_SB.PCI0.PDRC._Y30._LEN, HLEN)  // _LEN: Length
                     Store (HPTB, HBAS)
                     Store (0x0400, HLEN)
                 }
@@ -25421,7 +25621,7 @@ Return (Package (0x02)
 
     Name (BUFN, Zero)
     Name (MBUF, Buffer (0x1000){})
-    OperationRegion (MDBG, SystemMemory, 0x8AF57018, 0x00001004)
+    OperationRegion (MDBG, SystemMemory, 0x8AF57018, 0x1004)
     Field (MDBG, AnyAcc, Lock, Preserve)
     {
         MDG0,   32768
@@ -25487,9 +25687,7 @@ Return (Package (0x02)
 
     Method (ADBG, 1, Serialized)
     {
-        
-        Return(0)
-
+        Return (Zero)
     }
 
     Method (SHOW, 1, Serialized)
@@ -25765,10 +25963,10 @@ Return (Package (0x02)
                     {
                         I2cSerialBusV2 (0x0000, ControllerInitiated, 0x00061A80,
                             AddressingMode7Bit, "\\_SB.PCI0.I2C0",
-                            0x00, ResourceConsumer, _Y32, Exclusive,
+                            0x00, ResourceConsumer, _Y31, Exclusive,
                             )
                     })
-                    CreateWordField (IIC0, \_SB.PCI0.IICB._Y32._ADR, DAD0)  // _ADR: Address
+                    CreateWordField (IIC0, \_SB.PCI0.IICB._Y31._ADR, DAD0)  // _ADR: Address
                     Store (Arg0, DAD0)
                     Return (IIC0)
                 }
@@ -25778,10 +25976,10 @@ Return (Package (0x02)
                     {
                         I2cSerialBusV2 (0x0000, ControllerInitiated, 0x00061A80,
                             AddressingMode7Bit, "\\_SB.PCI0.I2C1",
-                            0x00, ResourceConsumer, _Y33, Exclusive,
+                            0x00, ResourceConsumer, _Y32, Exclusive,
                             )
                     })
-                    CreateWordField (IIC1, \_SB.PCI0.IICB._Y33._ADR, DAD1)  // _ADR: Address
+                    CreateWordField (IIC1, \_SB.PCI0.IICB._Y32._ADR, DAD1)  // _ADR: Address
                     Store (Arg0, DAD1)
                     Return (IIC1)
                 }
@@ -25791,10 +25989,10 @@ Return (Package (0x02)
                     {
                         I2cSerialBusV2 (0x0000, ControllerInitiated, 0x00061A80,
                             AddressingMode7Bit, "\\_SB.PCI0.I2C2",
-                            0x00, ResourceConsumer, _Y34, Exclusive,
+                            0x00, ResourceConsumer, _Y33, Exclusive,
                             )
                     })
-                    CreateWordField (IIC2, \_SB.PCI0.IICB._Y34._ADR, DAD2)  // _ADR: Address
+                    CreateWordField (IIC2, \_SB.PCI0.IICB._Y33._ADR, DAD2)  // _ADR: Address
                     Store (Arg0, DAD2)
                     Return (IIC2)
                 }
@@ -25804,10 +26002,10 @@ Return (Package (0x02)
                     {
                         I2cSerialBusV2 (0x0000, ControllerInitiated, 0x00061A80,
                             AddressingMode7Bit, "\\_SB.PCI0.I2C3",
-                            0x00, ResourceConsumer, _Y35, Exclusive,
+                            0x00, ResourceConsumer, _Y34, Exclusive,
                             )
                     })
-                    CreateWordField (IIC3, \_SB.PCI0.IICB._Y35._ADR, DAD3)  // _ADR: Address
+                    CreateWordField (IIC3, \_SB.PCI0.IICB._Y34._ADR, DAD3)  // _ADR: Address
                     Store (Arg0, DAD3)
                     Return (IIC3)
                 }
@@ -25817,10 +26015,10 @@ Return (Package (0x02)
                     {
                         I2cSerialBusV2 (0x0000, ControllerInitiated, 0x00061A80,
                             AddressingMode7Bit, "\\_SB.PCI0.I2C4",
-                            0x00, ResourceConsumer, _Y36, Exclusive,
+                            0x00, ResourceConsumer, _Y35, Exclusive,
                             )
                     })
-                    CreateWordField (IIC4, \_SB.PCI0.IICB._Y36._ADR, DAD4)  // _ADR: Address
+                    CreateWordField (IIC4, \_SB.PCI0.IICB._Y35._ADR, DAD4)  // _ADR: Address
                     Store (Arg0, DAD4)
                     Return (IIC4)
                 }
@@ -25830,10 +26028,10 @@ Return (Package (0x02)
                     {
                         I2cSerialBusV2 (0x0000, ControllerInitiated, 0x00061A80,
                             AddressingMode7Bit, "\\_SB.PCI0.I2C5",
-                            0x00, ResourceConsumer, _Y37, Exclusive,
+                            0x00, ResourceConsumer, _Y36, Exclusive,
                             )
                     })
-                    CreateWordField (IIC5, \_SB.PCI0.IICB._Y37._ADR, DAD5)  // _ADR: Address
+                    CreateWordField (IIC5, \_SB.PCI0.IICB._Y36._ADR, DAD5)  // _ADR: Address
                     Store (Arg0, DAD5)
                     Return (IIC5)
                 }
@@ -30110,17 +30308,10 @@ Return (Package (0x02)
                     OSTP ()
                     ECFG (One)
                 }
-                //added to turn nvidia/radeon off
-                If (LAnd(LEqual(Arg0,3),LEqual(Arg1,1)))
+
+                If (LAnd (LEqual (Arg0, 0x03), LEqual (Arg1, One)))
                 {
-                    External(\_SB.PCI0.RP01.PXSX._OFF, MethodObj)
-                    \_SB.PCI0.RP01.PXSX._OFF()
-                }
-                //added to turn nvidia/radeon off
-                If (LAnd(LEqual(Arg0,3),LEqual(Arg1,1)))
-                {
-                    External(\_SB.PCI0.RP01.PXSX._OFF, MethodObj)
-                    \_SB.PCI0.RP01.PXSX._OFF()
+                    ^^^RP01.PXSX._OFF ()
                 }
             }
 
@@ -30685,52 +30876,17 @@ Return (Package (0x02)
 
             Method (_Q11, 0, NotSerialized)  // _Qxx: EC Query
             {
-                
-Store ("=====PROJECT_QUERY_11=====", Debug)
-                Store (0x11, P80H)
-                Store (One, Index (^^^WMID.FEBC, Zero))
-                Store (HTBN, Index (^^^WMID.FEBC, One))
-                Store (BRTS, Index (^^^WMID.FEBC, One))
-                Store (0x04, Index (^^^WMID.FEBC, Zero))
-                Notify (WMID, 0xBC)
-                If (IGDS)
-                {
-                    Notify (^^^GFX0.DD1F, 0x87)
-                    Notify (PS2K, 0x20)
-                }
-                Else
-                {
-                }
-
-
+                Notify (PS2K, 0x20)
             }
 
             Method (_Q12, 0, NotSerialized)  // _Qxx: EC Query
             {
-                
-Store ("=====PROJECT_QUERY_12=====", Debug)
-                Store (0x12, P80H)
-                Store (One, Index (^^^WMID.FEBC, Zero))
-                Store (HTBN, Index (^^^WMID.FEBC, One))
-                Store (BRTS, Index (^^^WMID.FEBC, One))
-                Store (0x04, Index (^^^WMID.FEBC, Zero))
-                Notify (WMID, 0xBC)
-                If (IGDS)
-                {
-                    Notify (^^^GFX0.DD1F, 0x86)
-                    Notify (PS2K, 0x10)
-                }
-                Else
-                {
-                }
-
-
+                Notify (PS2K, 0x10)
             }
 
             Method (_Q15, 0, NotSerialized)  // _Qxx: EC Query
             {
-                
-Store ("=====PROJECT_QUERY_15=====", Debug)
+                Store ("=====PROJECT_QUERY_15=====", Debug)
                 If (IGDS)
                 {
                     Store (LIDF, Local0)
@@ -30744,46 +30900,34 @@ Store ("=====PROJECT_QUERY_15=====", Debug)
                 }
 
                 Notify (LID0, 0x80)
-
-
             }
 
             Method (_Q1D, 0, NotSerialized)  // _Qxx: EC Query
             {
-                
-Store ("=====PROJECT_QUERY_1D=====", Debug)
+                Store ("=====PROJECT_QUERY_1D=====", Debug)
                 Store (0x1D, P80H)
                 PCLK ()
-
-
             }
 
             Method (_Q1E, 0, NotSerialized)  // _Qxx: EC Query
             {
-                
-Store (0x1E, SMID)
+                Store (0x1E, SMID)
                 Store (0xB2, SMIC)
                 Stall (0xFF)
                 Stall (0xFF)
-
-
             }
 
             Method (_Q1F, 0, NotSerialized)  // _Qxx: EC Query
             {
-                
-Store (0x1F, SMID)
+                Store (0x1F, SMID)
                 Store (0xB2, SMIC)
                 Stall (0xFF)
                 Stall (0xFF)
-
-
             }
 
             Method (_Q37, 0, NotSerialized)  // _Qxx: EC Query
             {
-                
-Store ("=====PROJECT_QUERY_37=====", Debug)
+                Store ("=====PROJECT_QUERY_37=====", Debug)
                 Store (0x37, P80H)
                 Notify (ACAD, 0x80)
                 Sleep (0x03E8)
@@ -30793,14 +30937,11 @@ Store ("=====PROJECT_QUERY_37=====", Debug)
                 Store (0x08, Index (^^^WMID.FEBC, Zero))
                 Store (One, Index (^^^WMID.FEBC, One))
                 Notify (WMID, 0xBC)
-
-
             }
 
             Method (_Q38, 0, NotSerialized)  // _Qxx: EC Query
             {
-                
-Store ("=====PROJECT_QUERY_38=====", Debug)
+                Store ("=====PROJECT_QUERY_38=====", Debug)
                 Sleep (0x64)
                 Store (Zero, DNBF)
                 Store (0x38, P80H)
@@ -30812,27 +30953,21 @@ Store ("=====PROJECT_QUERY_38=====", Debug)
                 Store (0x08, Index (^^^WMID.FEBC, Zero))
                 Store (Zero, Index (^^^WMID.FEBC, One))
                 Notify (WMID, 0xBC)
-
-
             }
 
             Method (_Q41, 0, NotSerialized)  // _Qxx: EC Query
             {
-                
-Store ("=====PROJECT_QUERY_41=====", Debug)
+                Store ("=====PROJECT_QUERY_41=====", Debug)
                 Store (0x41, P80H)
                 Store (One, Index (^^^WMID.FEBC, Zero))
                 Store (0x8A, Index (^^^WMID.FEBC, One))
                 Store (One, Index (^^^WMID.FEBC, 0x02))
                 Notify (WMID, 0xBC)
-
-
             }
 
             Method (_Q44, 0, NotSerialized)  // _Qxx: EC Query
             {
-                
-Store ("=====PROJECT_QUERY_44=====", Debug)
+                Store ("=====PROJECT_QUERY_44=====", Debug)
                 If (LEqual (DNLV, One))
                 {
                     Notify (^^^RP01.PXSX, 0xD1)
@@ -30857,106 +30992,74 @@ Store ("=====PROJECT_QUERY_44=====", Debug)
                 {
                     Notify (^^^RP01.PXSX, 0xD1)
                 }
-
-
             }
 
             Method (_Q45, 0, NotSerialized)  // _Qxx: EC Query
             {
-                
-Store (One, Index (^^^WMID.FEBC, Zero))
+                Store (One, Index (^^^WMID.FEBC, Zero))
                 Store (HTBN, Index (^^^WMID.FEBC, One))
                 Notify (WMID, 0xBC)
-
-
             }
 
             Method (_Q46, 0, NotSerialized)  // _Qxx: EC Query
             {
-                
-Store (0x02, Index (^^^WMID.FEBC, Zero))
+                Store (0x02, Index (^^^WMID.FEBC, Zero))
                 Store (HTBN, Index (^^^WMID.FEBC, One))
                 Notify (WMID, 0xBC)
-
-
             }
 
             Method (_Q4C, 0, NotSerialized)  // _Qxx: EC Query
             {
-                
-Store (0x4C, SMID)
+                Store (0x4C, SMID)
                 Store (0xB2, SMIC)
                 Stall (0xFF)
                 Stall (0xFF)
-
-
             }
 
             Method (_Q51, 0, NotSerialized)  // _Qxx: EC Query
             {
-                
-Notify (SEN3, 0x90)
-
-
+                Notify (SEN3, 0x90)
             }
 
             Method (_Q52, 0, NotSerialized)  // _Qxx: EC Query
             {
-                
-Notify (SEN2, 0x90)
-
-
+                Notify (SEN2, 0x90)
             }
 
             Method (_Q53, 0, NotSerialized)  // _Qxx: EC Query
             {
-                
-Notify (SEN1, 0x90)
-
-
+                Notify (SEN1, 0x90)
             }
 
             Method (_Q5A, 0, NotSerialized)  // _Qxx: EC Query
             {
-                
-Store ("=====PROJECT_QUERY_5A=====", Debug)
+                Store ("=====PROJECT_QUERY_5A=====", Debug)
                 Store (0x09, Index (^^^WMID.FEBC, Zero))
                 Store (BBMS, Index (^^^WMID.FEBC, One))
                 Notify (WMID, 0xBC)
-
-
             }
 
             Method (_Q63, 0, NotSerialized)  // _Qxx: EC Query
             {
-                
-Notify (AAMC, 0x80)
-
-
+                Notify (AAMC, 0x80)
             }
 
             Method (_Q24, 0, NotSerialized)  // _Qxx: EC Query
             {
-                
-Store (0x24, P80H)
+                Store (0x24, P80H)
                 Store ("=====QUERY_24=====", Debug)
                 Sleep (0x03E8)
                 Notify (BAT1, 0x80)
-
-
             }
 
             Method (_Q25, 0, NotSerialized)  // _Qxx: EC Query
             {
-                
-Store (0x25, P80H)
+                Store (0x25, P80H)
                 Store ("=====QUERY_25=====", Debug)
                 Sleep (0x03E8)
                 Notify (BAT1, 0x81)
                 Sleep (0x03E8)
                 Notify (BAT1, 0x80)
-
-
             }
         }
 
@@ -31229,6 +31332,12 @@ Store (0x25, P80H)
                 Store (^^EC0.ADPT, Local0)
                 Return (Local0)
             }
+
+            Name (_PRW, Package (0x02)  // _PRW: Power Resources for Wake
+            {
+                0x18, 
+                0x03
+            })
         }
 
         Scope (\_SB)
@@ -31662,7 +31771,7 @@ Store (0x25, P80H)
                 {
                     I2cSerialBusV2 (0x0000, ControllerInitiated, 0x00061A80,
                         AddressingMode7Bit, "\\_SB.PCI0.I2C1",
-                        0x00, ResourceConsumer, _Y38, Exclusive,
+                        0x00, ResourceConsumer, _Y37, Exclusive,
                         )
                 })
                 Name (SBFI, ResourceTemplate ()
@@ -31681,7 +31790,7 @@ Store (0x25, P80H)
                             0x001B
                         }
                 })
-                CreateWordField (SBFB, \_SB.PCI0.I2C1.TPAD._Y38._ADR, ADR0)  // _ADR: Address
+                CreateWordField (SBFB, \_SB.PCI0.I2C1.TPAD._Y37._ADR, ADR0)  // _ADR: Address
                 Method (_HID, 0, Serialized)  // _HID: Hardware ID
                 {
                     If (Not (CondRefOf (TPDF)))
@@ -31950,6 +32059,18 @@ Store (0x25, P80H)
 
     Method (WAK, 1, NotSerialized)
     {
+    }
+
+    Scope (_SB)
+    {
+        Device (PNLF)
+        {
+            Name (_ADR, Zero)  // _ADR: Address
+            Name (_HID, EisaId ("APP0002"))  // _HID: Hardware ID
+            Name (_CID, "backlight")  // _CID: Compatible ID
+            Name (_UID, 0x0A)  // _UID: Unique ID
+            Name (_STA, 0x0B)  // _STA: Status
+        }
     }
 }
 
