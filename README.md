@@ -15,11 +15,11 @@ Create a Bootable USB for the OSX, So refer to the Guide by RehabMan [[Guide] Bo
     
 ### Bluetooth
 * The Native Atheros BT will work out-of-the Box, But you can't turn off the BT becouse Power Management is not supported;
-    * To Fix this, you'll have to get a MacOS compatible wifi+BT card becouse the default one is combo card. The best choice will be BCM94352HMB which has WiFi+BT.
+    * To Fix this, you'll have to get a MacOS compatible wifi+BT card. The best choice will be BCM94352Z which has WiFi+BT.
 
 
 ### Ethernet
-* The Ethernet is `8411B`, and you'll need RealtekRTL8111.kext to enable Ethernet.
+* The Ethernet is `8411B`, and you'll need RealtekRTL8111.kext to Enable Gigabit Ethernet.
 
 ### Graphics
 * The iGPU is `Intel UHD Graphics 620`, and its enabled using `Ig-Platform-id=0x191E0000`
@@ -32,11 +32,13 @@ Create a Bootable USB for the OSX, So refer to the Guide by RehabMan [[Guide] Bo
 
 ### USB
 * To Raise the Port Limit, We're using USBInjectAll.kext from RehabMan. You can also Find Patched SSDT-UIAC under ACPI/Patched Folder.
-* SD Card Reader is not supported and be disabled to save power.
+* SD Card Reader is not supported and it's disabled to save power.
 
 ### Wi-Fi
 * The Wi-Fi Card this Laptop uses is `Atheros QCA9377`. Since it is not supported natively, and there are none kexts to enable this card on macOS, We can't use this card on MacOS and I don't think it'll get supported in the future.
-* The Best Choice will be to Replace current Card with BCM94352HMB which has WiFI+BT, or BCM94360HMB Which Supports MacOS natively.
+* The Best Choice will be to Replace current Card with BCM94352Z which has WiFI+BT, or BCM943602BAED Which Supports MacOS natively.
+* I Have Already Changed My Current WiFi card with BCM94352Z, you can find it on AliExpress for like $20-30.
+* I've Patched Config.plist for BCM94352Z and BCM943602BAED and also added Kexts for BT as well. Keep in mind, this laptop uses **M.2(NGFF)** Socket with **A+E Key**. Half size Card Won't Work.
 
 
 
