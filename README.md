@@ -24,7 +24,7 @@ Create a Bootable USB for the OSX, So refer to the Guide by RehabMan [[Guide] Bo
 ### Graphics
 * The iGPU is `Intel UHD Graphics 620`, and its enabled using `Ig-Platform-id=0x191E0000`
 * For HDMI Implementation we need patched the FrameBuffer & HDMI audio, I have already patched it in Config.plist
-* The discrete graphics' name is `NVIDIA GeForce MX150`, and its disabled becuase macOS doesn't support Optimus technology. Plus Battery Life if Improved to 6-7 hours of Backup.
+* The discrete graphics' name is `NVIDIA GeForce MX150`, and its disabled becuase macOS doesn't support Optimus technology. Plus Battery Life is Improved to 6-7 hours of Backup.
 * Native brightness hotkey support; using DSDT.aml patched from RehabMan's [[Guide] Patching DSDT/SSDT for LAPTOP backlight control](https://www.tonymacx86.com/threads/guide-patching-dsdt-ssdt-for-laptop-backlight-control.152659/).
 
 ### Touchpad
