@@ -412,15 +412,21 @@
 		</dict>
 		<key>FakeID</key>
 		<dict>
+			<key>#IntelGFX</key>
+			<string>0x19168086</string>
 			<key>#Kaby Lake-Comment</key>
 			<string>To avoid automatic Clover fake device-id (Skylake) injection</string>
-			<key>IntelGFX</key>
-			<string>0x19168086</string>
 		</dict>
 		<key>Properties</key>
 		<dict>
 			<key>PciRoot(0)/Pci(0x02,0)</key>
 			<dict>
+				<key>#framebuffer-con0-enable</key>
+				<integer>1</integer>
+				<key>#framebuffer-con0-type</key>
+				<data>
+				AAQAAA==
+				</data>
 				<key>AAPL,ig-platform-id</key>
 				<data>
 				AAAbGQ==
@@ -428,12 +434,6 @@
 				<key>device-id</key>
 				<data>
 				FhkAAA==
-				</data>
-				<key>framebuffer-con0-enable</key>
-				<integer>1</integer>
-				<key>framebuffer-con0-type</key>
-				<data>
-				AAQAAA==
 				</data>
 				<key>framebuffer-con1-enable</key>
 				<integer>1</integer>
