@@ -14,7 +14,8 @@
  - [x] Usb 3.0 + Type C
  - [x] Sleep From (Lid)
  - [x] iGPU with disabled dGPU
- - [x] WiFi (2.4 + 5GHz) + BT (BCM94352z)
+ - [x] WiFi (2.4 + 5GHz) + BT by using BCM94352z
+ - [x] Native hotkey support w/ Fn keys
 
  ### What Doesn't Works
  - [ ] SD Card Reader
@@ -26,7 +27,7 @@
 
 #### Audio
 - The Sound Card is `Realtek ALC255`, which is drived by `AppleALC` on layout-id 3.
--  If headphones are not working, please see [ALCPlugFix](https://github.com/Siddhesh9146/Acer-E515-51G-Hackintosh/tree/master/ALCPlugFix). You may need to replug headphones after every boot.
+- If headphones are not working, please see [ALCPlugFix](https://github.com/Siddhesh9146/Acer-E515-51G-Hackintosh/tree/master/ALCPlugFix).
 
     
 #### Bluetooth
@@ -50,7 +51,7 @@
 
 
 #### Wi-Fi
-- The Wi-Fi Card this Laptop uses is `Atheros QCA9377`. Since it is not supported natively, and there are none kexts to enable this card on macOS, We can't use this card and I don't think it'll get supported in the future.
+- The Native Wi-Fi Card this Laptop uses is `Atheros QCA9377`. Since it is not supported natively, and there are none kexts to enable this card on macOS, We can't use this card and I don't think it'll get supported in the future.
 - The Best Choice will be to Replace current Card with BCM94352Z which has WiFI+BT, or BCM943602BAED Which Supports MacOS natively.
 - I Have Already Changed My Current WiFi card with BCM94352Z, you can find it on AliExpress for like $20-30.
 - I've Patched Config.plist for BCM94352Z and BCM943602BAED and also added Kexts for BT as well. Keep in mind, this laptop uses **M.2(NGFF)** Socket with **A+E Key**. Half size Card Won't Work.
