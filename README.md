@@ -1,5 +1,5 @@
 # Acer-A515-51G-Hackintosh
-#### Supports OSx 10.13.x and 10.14.x
+#### Supports MacOS 10.13.x and 10.14.x
 ---
 ### What Works
  - [x] Audio w/ headphone jack
@@ -49,7 +49,7 @@
 - To Raise the Port Limit, We're using USBInjectAll.kext from RehabMan. You can also Find Patched SSDT-UIAC under ACPI/Patched Folder.
 
 
-### Wi-Fia
+#### Wi-Fi
 - The Wi-Fi Card this Laptop uses is `Atheros QCA9377`. Since it is not supported natively, and there are none kexts to enable this card on macOS, We can't use this card and I don't think it'll get supported in the future.
 - The Best Choice will be to Replace current Card with BCM94352Z which has WiFI+BT, or BCM943602BAED Which Supports MacOS natively.
 - I Have Already Changed My Current WiFi card with BCM94352Z, you can find it on AliExpress for like $20-30.
