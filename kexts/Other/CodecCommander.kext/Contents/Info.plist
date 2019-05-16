@@ -93,7 +93,7 @@
 					<key>Perform Reset</key>
 					<true/>
 					<key>Perform Reset on EAPD Fail</key>
-					<false/>
+					<true/>
 					<key>Perform Reset on External Wake</key>
 					<true/>
 					<key>Send Delay</key>
@@ -108,7 +108,7 @@
 					<key>Check Infinitely</key>
 					<false/>
 					<key>Disable</key>
-					<true/>
+					<false/>
 					<key>Sleep Nodes</key>
 					<false/>
 					<key>Update Nodes</key>
@@ -252,9 +252,9 @@
 						</dict>
 					</array>
 					<key>Perform Reset</key>
-					<false/>
+					<true/>
 					<key>Send Delay</key>
-					<integer>10</integer>
+					<integer>300</integer>
 					<key>Sleep Nodes</key>
 					<false/>
 				</dict>
