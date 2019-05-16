@@ -20,6 +20,8 @@
 				<false/>
 				<key>Comment-IRQ Fix</key>
 				<string>The following fixes may be needed for onboard audio/USB/etc</string>
+				<key>FixHDA</key>
+				<false/>
 				<key>FixHPET</key>
 				<false/>
 				<key>FixIPIC</key>
@@ -105,48 +107,6 @@
 					<key>Replace</key>
 					<data>
 					WERTTQ==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change EC0 to EC</string>
-					<key>Disabled</key>
-					<true/>
-					<key>Find</key>
-					<data>
-					RUMwXw==
-					</data>
-					<key>Replace</key>
-					<data>
-					RUNfXw==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change H_EC to EC</string>
-					<key>Disabled</key>
-					<true/>
-					<key>Find</key>
-					<data>
-					SF9FQw==
-					</data>
-					<key>Replace</key>
-					<data>
-					RUNfXw==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change ECDV to EC</string>
-					<key>Disabled</key>
-					<true/>
-					<key>Find</key>
-					<data>
-					RUNEVg==
-					</data>
-					<key>Replace</key>
-					<data>
-					RUNfXw==
 					</data>
 				</dict>
 				<dict>
@@ -239,17 +199,7 @@
 		<array>
 			<dict>
 				<key>Signature</key>
-				<string>#MCFG</string>
-			</dict>
-			<dict>
-				<key>Signature</key>
 				<string>DMAR</string>
-			</dict>
-			<dict>
-				<key>Signature</key>
-				<string>SSDT</string>
-				<key>TableId</key>
-				<string>xh_rvp10</string>
 			</dict>
 		</array>
 		<key>FixHeaders</key>
@@ -272,11 +222,11 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>dart=0 nv_disable=1 -v darkwake=no lilucpu=8 rootless=0 kext-dev-mode=1 -disablegfxfirmware -rad24 abm_firstpolldelay=16000</string>
+		<string>dart=0 nv_disable=1 darkwake=2 rootless=0 -disablegfxfirmware lilucpu=8</string>
 		<key>DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>DisableCloverHotkeys</key>
-		<true/>
+		<false/>
 		<key>Legacy</key>
 		<string>PBR</string>
 		<key>NeverDoRecovery</key>
@@ -287,6 +237,8 @@
 		<true/>
 		<key>Secure</key>
 		<false/>
+		<key>Timeout</key>
+		<integer>3</integer>
 		<key>XMPDetection</key>
 		<string>Yes</string>
 	</dict>
@@ -434,6 +386,10 @@
 				<key>device-id</key>
 				<data>
 				FhkAAA==
+				</data>
+				<key>disable-external-gpu</key>
+				<data>
+				AQAAAA==
 				</data>
 				<key>framebuffer-con1-enable</key>
 				<integer>1</integer>
@@ -640,6 +596,8 @@
 				<data>
 				gflSqgAAdSk=
 				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
 				<key>Name</key>
 				<string>com.apple.driver.AirPort.Brcm4360</string>
 				<key>Replace</key>
@@ -668,10 +626,14 @@
 			<dict>
 				<key>Comment</key>
 				<string>Enable TRIM for SSD</string>
+				<key>Disabled</key>
+				<false/>
 				<key>Find</key>
 				<data>
 				AEFQUExFIFNTRAA=
 				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
 				<key>Name</key>
 				<string>com.apple.iokit.IOAHCIBlockStorage</string>
 				<key>Replace</key>
@@ -687,25 +649,17 @@
 		<string>0x28</string>
 		<key>CsrActiveConfig</key>
 		<string>0x67</string>
-		<key>MLB</key>
-		<string></string>
 		<key>ROM</key>
 		<string>UseMacAddr0</string>
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
-		<key>BiosVendor</key>
-		<string>Apple Inc.</string>
-		<key>ChassisAssetTag</key>
-		<string>MacBook-Aluminum</string>
-		<key>Family</key>
-		<string>MacBook Pro</string>
 		<key>Mobile</key>
 		<true/>
 		<key>ProductName</key>
 		<string>MacBookPro14,1</string>
-		<key>Version</key>
-		<string>1.0</string>
+		<key>Trust</key>
+		<true/>
 	</dict>
 	<key>SystemParameters</key>
 	<dict>
