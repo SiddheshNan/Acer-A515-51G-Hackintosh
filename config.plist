@@ -222,11 +222,11 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>dart=0 nv_disable=1 darkwake=2 rootless=0 -disablegfxfirmware lilucpu=8</string>
+		<string>dart=0 nv_disable=1 darkwake=no rootless=0 -disablegfxfirmware lilucpu=8 -v </string>
 		<key>DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>DisableCloverHotkeys</key>
-		<false/>
+		<true/>
 		<key>Legacy</key>
 		<string>PBR</string>
 		<key>NeverDoRecovery</key>
@@ -442,7 +442,7 @@
 			<true/>
 		</dict>
 		<key>UseIntelHDMI</key>
-		<false/>
+		<true/>
 	</dict>
 	<key>DisableDrivers</key>
 	<array>
@@ -666,7 +666,7 @@
 		<key>CustomUUID</key>
 		<string></string>
 		<key>InjectKexts</key>
-		<string>Detect</string>
+		<string>Yes</string>
 		<key>InjectSystemID</key>
 		<true/>
 	</dict>
