@@ -6127,138 +6127,7 @@ DefinitionBlock ("", "DSDT", 2, "ACRSYS", "ACRPRDCT", 0x00000000)
                 }
             }
 
-            Method (_DSM, 4, Serialized)  // _DSM: Device-Specific Method
-            {
-                ADBG ("HDAS _DSM")
-                If (PCIC (Arg0))
-                {
-                    Return (PCID (Arg0, Arg1, Arg2, Arg3))
-                }
-
-                If (LEqual (Arg0, ToUUID ("a69f886e-6ceb-4594-a41f-7b5dce24c553")))
-                {
-                    Switch (ToInteger (Arg2))
-                    {
-                        Case (Zero)
-                        {
-                            Return (Buffer (One)
-                            {
-                                 0x0F                                           
-                            })
-                        }
-                        Case (One)
-                        {
-                            ADBG ("_DSM Fun 1 NHLT")
-                            Return (NBUF)
-                        }
-                        Case (0x02)
-                        {
-                            ADBG ("_DSM Fun 2 FMSK")
-                            Return (ADFM)
-                        }
-                        Case (0x03)
-                        {
-                            ADBG ("_DSM Fun 3 PPMS")
-                            If (CondRefOf (\_SB.PCI0.HDAS.PPMS))
-                            {
-                                Return (PPMS (Arg3))
-                            }
-
-                            Return (Zero)
-                        }
-                        Default
-                        {
-                            ADBG ("_DSM Fun NOK")
-                            Return (Buffer (One)
-                            {
-                                 0x00                                           
-                            })
-                        }
-
-                    }
-                }
-
-                If (CondRefOf (HIWC))
-                {
-                    If (HIWC (Arg0))
-                    {
-                        If (CondRefOf (HIDW))
-                        {
-                            Return (HIDW (Arg0, Arg1, Arg2, Arg3))
-                        }
-                    }
-                }
-
-                Method (HIDW, 4, Serialized)
-                {
-                    If (LEqual (Arg0, ToUUID ("1730e71d-e5dd-4a34-be57-4d76b6a2fe37")))
-                    {
-                        If (LEqual (Arg2, Zero))
-                        {
-                            If (LEqual (Arg1, Zero))
-                            {
-                                Return (Buffer (One)
-                                {
-                                     0x03                                           
-                                })
-                            }
-                            Else
-                            {
-                                Return (Zero)
-                            }
-                        }
-
-                        If (LEqual (Arg2, One))
-                        {
-                            Switch (ToInteger (DerefOf (Index (Arg3, Zero))))
-                            {
-                                Case (Zero)
-                                {
-                                }
-                                Case (One)
-                                {
-                                }
-                                Case (0x02)
-                                {
-                                }
-                                Case (0x03)
-                                {
-                                }
-
-                            }
-
-                            Return (Zero)
-                        }
-                        Else
-                        {
-                            Return (Zero)
-                        }
-                    }
-                    Else
-                    {
-                        Return (Buffer (One)
-                        {
-                             0x00                                           
-                        })
-                    }
-                }
-
-                Method (HIWC, 1, NotSerialized)
-                {
-                    If (LEqual (Arg0, ToUUID ("1730e71d-e5dd-4a34-be57-4d76b6a2fe37")))
-                    {
-                        Return (One)
-                    }
-
-                    Return (Zero)
-                }
-
-                ADBG ("_DSM UUID NOK")
-                Return (Buffer (One)
-                {
-                     0x00                                           
-                })
-            }
+            
 
             Device (BUS0)
             {
@@ -6293,6 +6162,17 @@ DefinitionBlock ("", "DSDT", 2, "ACRSYS", "ACRPRDCT", 0x00000000)
                 {
                     0x6D, 
                     Zero
+                })
+            }
+            Method (_DSM, 4, NotSerialized)
+            {
+                If (LEqual (Arg2, Zero)) { Return (Buffer() { 0x03 } ) }
+                Return (Package()
+                {
+                    "layout-id", Buffer() { 3, 0x00, 0x00, 0x00 },
+                    "hda-gfx", Buffer() { "onboard-1" },
+                    "PinConfigurations", Buffer() { },
+                    //"MaximumBootBeepVolume", 77,
                 })
             }
         }
@@ -32063,13 +31943,17 @@ DefinitionBlock ("", "DSDT", 2, "ACRSYS", "ACRPRDCT", 0x00000000)
 
     Scope (_SB)
     {
+        
+    }
+    Scope (_SB)
+    {
         Device (PNLF)
         {
-            Name (_ADR, Zero)  // _ADR: Address
-            Name (_HID, EisaId ("APP0002"))  // _HID: Hardware ID
-            Name (_CID, "backlight")  // _CID: Compatible ID
-            Name (_UID, 0x0A)  // _UID: Unique ID
-            Name (_STA, 0x0B)  // _STA: Status
+            Name (_ADR, Zero)
+            Name (_HID, EisaId ("APP0002"))
+            Name (_CID, "backlight")
+            Name (_UID, 10)
+            Name (_STA, 0x0B)
         }
     }
 }
