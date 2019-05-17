@@ -19,6 +19,9 @@
 
  ### What Doesn't Works
  - [ ] SD Card Reader
+ - [ ] External Mic through headphone jack
+ - [ ] HDMI audio
+ - [ ] Sleep wake using mouse (only keyboard works)
 
 ---
 ####  Installation
