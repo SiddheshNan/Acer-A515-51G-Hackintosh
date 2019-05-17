@@ -20,8 +20,6 @@
 				<false/>
 				<key>Comment-IRQ Fix</key>
 				<string>The following fixes may be needed for onboard audio/USB/etc</string>
-				<key>FixHDA</key>
-				<false/>
 				<key>FixHPET</key>
 				<false/>
 				<key>FixIPIC</key>
@@ -107,6 +105,48 @@
 					<key>Replace</key>
 					<data>
 					WERTTQ==
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change EC0 to EC</string>
+					<key>Disabled</key>
+					<true/>
+					<key>Find</key>
+					<data>
+					RUMwXw==
+					</data>
+					<key>Replace</key>
+					<data>
+					RUNfXw==
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change H_EC to EC</string>
+					<key>Disabled</key>
+					<true/>
+					<key>Find</key>
+					<data>
+					SF9FQw==
+					</data>
+					<key>Replace</key>
+					<data>
+					RUNfXw==
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change ECDV to EC</string>
+					<key>Disabled</key>
+					<true/>
+					<key>Find</key>
+					<data>
+					RUNEVg==
+					</data>
+					<key>Replace</key>
+					<data>
+					RUNfXw==
 					</data>
 				</dict>
 				<dict>
@@ -199,7 +239,17 @@
 		<array>
 			<dict>
 				<key>Signature</key>
+				<string>#MCFG</string>
+			</dict>
+			<dict>
+				<key>Signature</key>
 				<string>DMAR</string>
+			</dict>
+			<dict>
+				<key>Signature</key>
+				<string>SSDT</string>
+				<key>TableId</key>
+				<string>xh_rvp10</string>
 			</dict>
 		</array>
 		<key>FixHeaders</key>
@@ -222,7 +272,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>dart=0 nv_disable=1 darkwake=no rootless=0 -disablegfxfirmware lilucpu=8 -v </string>
+		<string>dart=0 nv_disable=1 -v darkwake=2 lilucpu=8 rootless=0 kext-dev-mode=1 -disablegfxfirmware</string>
 		<key>DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>DisableCloverHotkeys</key>
@@ -387,10 +437,6 @@
 				<data>
 				FhkAAA==
 				</data>
-				<key>disable-external-gpu</key>
-				<data>
-				AQAAAA==
-				</data>
 				<key>framebuffer-con1-enable</key>
 				<integer>1</integer>
 				<key>framebuffer-con1-flags</key>
@@ -442,7 +488,7 @@
 			<true/>
 		</dict>
 		<key>UseIntelHDMI</key>
-		<true/>
+		<false/>
 	</dict>
 	<key>DisableDrivers</key>
 	<array>
@@ -649,6 +695,8 @@
 		<string>0x28</string>
 		<key>CsrActiveConfig</key>
 		<string>0x67</string>
+		<key>MLB</key>
+		<string></string>
 		<key>ROM</key>
 		<string>UseMacAddr0</string>
 	</dict>
@@ -666,7 +714,7 @@
 		<key>CustomUUID</key>
 		<string></string>
 		<key>InjectKexts</key>
-		<string>Yes</string>
+		<string>Detect</string>
 		<key>InjectSystemID</key>
 		<true/>
 	</dict>
