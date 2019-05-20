@@ -22,11 +22,24 @@
  - [ ] External Mic through headphone jack
  - [ ] HDMI audio
  - [ ] Sleep wake using mouse (only keyboard works)
-
+ 
 ---
-####  Installation
+###  Basic Installation
 
 - Create a Bootable USB for OSx by using the guide by RehabMan [[Guide] Booting the OS X installer on LAPTOPS with Clover](https://www.tonymacx86.com/el-capitan-laptop-support/148093-guide-booting-os-x-installer-laptops-clover.html).
+- Install MacOS to you're SSD or hard drive.
+- Install [Clover Bootloader](https://sourceforge.net/projects/cloverefiboot) in you're SSD or hard drive.
+- Copy the contains of this repo into clover folder of you're EFI.
+- **IMPORTANT** Make sure to Genrate system definitions of MacBook pro 14.1 in config.plist file using [Clover Configurator](https://mackie100projects.altervista.org/download-clover-configurator/) or Else MacOS will not Boot!
+- You can find Tutorial about it [Here](https://www.tonymacx86.com/threads/guide-how-to-configure-your-systems-smbios-correctly.198155/).
+- And as simple as that, you'll have a fully working Hackbook pro (with some exceptions)!
+- Keep reading below if you want to tweak the Hackbook for better performance..
+
+#### Tweaking the HackBook..
+
+- Coming soon...
+
+----
 
 #### Audio
 - The Sound Card is `Realtek ALC255`, which is drived by `AppleALC` on layout-id 3.
