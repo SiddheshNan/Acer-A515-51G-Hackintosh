@@ -3,21 +3,21 @@
 ---
 ### What Works
  - [x] Audio w/ headphone jack
- - [x] Backlight
- - [x] WebCam
  - [x] CPU Speedstep (XCPM)
+ - [x] iGPU with disabled dGPU
+ - [x] Battery Management
+ - [x] Backlight
  - [x] Ethernet
  - [x] HDMI
- - [x] Battery Management
  - [x] Sleep + Wake
  - [x] Smart Touchpad + Gestures
+ - [x] WebCam
  - [x] Usb 3.0 + Type C
  - [x] Sleep From (Lid)
- - [x] iGPU with disabled dGPU
  - [x] WiFi (2.4 + 5GHz) + BT by using BCM94352z
  - [x] Native hotkey support w/ Fn keys
 
- ### What Doesn't Works
+ #### In Progress..
  - [ ] SD Card Reader
  - [ ] External Mic through headphone jack
  - [ ] HDMI audio
@@ -30,16 +30,17 @@
 - Install MacOS to you're SSD or hard drive.
 - Install [Clover Bootloader](https://sourceforge.net/projects/cloverefiboot) in you're SSD or hard drive.
 - Copy the contains of this repo into clover folder of you're EFI.
-- **IMPORTANT** Make sure to Genrate system definitions of MacBook pro 14.1 in config.plist file using [Clover Configurator](https://mackie100projects.altervista.org/download-clover-configurator/) or Else MacOS will not Boot!
-- You can find Tutorial about it [Here](https://www.tonymacx86.com/threads/guide-how-to-configure-your-systems-smbios-correctly.198155/).
+- **[IMPORTANT]** Make sure to Generate system definitions of MacBook pro 14.1 in config.plist file using [Clover Configurator](https://mackie100projects.altervista.org/download-clover-configurator/) or Else MacOS will not Boot! You can find Tutorial about it [Here](https://www.tonymacx86.com/threads/guide-how-to-configure-your-systems-smbios-correctly.198155/).
 - And as simple as that, you'll have a fully working Hackbook pro (with some exceptions)!
 - Keep reading below if you want to tweak the Hackbook for better performance..
 
-#### Tweaking the HackBook..
+### Tweaking the HackBook..
 
 - Coming soon...
 
 ----
+
+### Info about the build
 
 #### Audio
 - The Sound Card is `Realtek ALC255`, which is drived by `AppleALC` on layout-id 3.
