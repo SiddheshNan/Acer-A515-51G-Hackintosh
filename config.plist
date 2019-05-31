@@ -235,8 +235,6 @@
 				</dict>
 			</array>
 		</dict>
-		<key>DropTables</key>
-		<array/>
 		<key>FixHeaders</key>
 		<true/>
 		<key>HaltEnabler</key>
@@ -393,7 +391,7 @@
 		<key>Audio</key>
 		<dict>
 			<key>Inject</key>
-			<integer>3</integer>
+			<integer>31</integer>
 			<key>ResetHDA</key>
 			<false/>
 		</dict>
@@ -462,7 +460,7 @@
 				<key>hda-gfx</key>
 				<string>onboard-1</string>
 				<key>layout-id</key>
-				<integer>3</integer>
+				<integer>31</integer>
 			</dict>
 		</dict>
 		<key>USB</key>
