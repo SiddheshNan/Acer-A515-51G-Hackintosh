@@ -43,7 +43,7 @@
 ### Info about the build
 
 #### Audio
-- The Sound Card is `Realtek ALC255`, which is drived by `AppleALC` on layout-id 3.
+- The Sound Card is `Realtek ALC255`, which is drived by `AppleALC` on layout-id 31.
 - If headphones are not working, please see [ALCPlugFix](https://github.com/Siddhesh9146/Acer-E515-51G-Hackintosh/tree/master/ALCPlugFix).
 
     
