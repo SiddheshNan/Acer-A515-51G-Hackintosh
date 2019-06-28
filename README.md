@@ -16,12 +16,12 @@
  - [x] Sleep From (Lid)
  - [x] WiFi (2.4 + 5GHz) + BT by using BCM94352z
  - [x] Native hotkey support w/ Fn keys
+ - [x] Sleep wake using mouse or any external Input device (Enable Wake from USB from BIOS)
 
  #### In Progress..
  - [ ] SD Card Reader
  - [ ] External Mic through headphone jack
  - [ ] HDMI audio
- - [ ] Sleep wake using mouse (only keyboard works)
  
 ---
 ###  Basic Installation
