@@ -9,8 +9,9 @@
  - [x] Backlight
  - [x] Ethernet
  - [x] HDMI
+ - [x] HDMI audio
  - [x] Sleep + Wake
- - [x] Smart Touchpad + Gestures
+ - [x] Smart Touchpad + Gestures (using I2C)
  - [x] WebCam
  - [x] Usb 3.0 + Type C
  - [x] Sleep From (Lid)
@@ -18,10 +19,11 @@
  - [x] Native hotkey support w/ Fn keys
  - [x] Sleep wake using mouse or any external Input device (Enable Wake from USB from BIOS)
 
+
  #### In Progress..
  - [ ] SD Card Reader
  - [ ] External Mic through headphone jack
- - [ ] HDMI audio
+
  
 ---
 ###  Basic Installation
