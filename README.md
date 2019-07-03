@@ -16,12 +16,12 @@
  - [x] Sleep From (Lid)
  - [x] WiFi (2.4 + 5GHz) + BT by using BCM94352z
  - [x] Native hotkey support w/ Fn keys
+ - [x] Sleep wake using mouse or any external Input device (Enable Wake from USB from BIOS)
 
  #### In Progress..
  - [ ] SD Card Reader
  - [ ] External Mic through headphone jack
  - [ ] HDMI audio
- - [ ] Sleep wake using mouse (only keyboard works)
  
 ---
 ###  Basic Installation
@@ -43,7 +43,7 @@
 ### Info about the build
 
 #### Audio
-- The Sound Card is `Realtek ALC255`, which is drived by `AppleALC` on layout-id 3.
+- The Sound Card is `Realtek ALC255`, which is drived by `AppleALC` on layout-id 31.
 - If headphones are not working, please see [ALCPlugFix](https://github.com/Siddhesh9146/Acer-E515-51G-Hackintosh/tree/master/ALCPlugFix).
 
     
