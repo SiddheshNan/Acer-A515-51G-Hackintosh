@@ -18,37 +18,27 @@
  - [x] WiFi (2.4 + 5GHz) + BT by using BCM94352z
  - [x] Native hotkey support w/ Fn keys
  - [x] Sleep wake using mouse or any external Input device (Enable Wake from USB from BIOS)
-
-
- #### In Progress..
- - [ ] SD Card Reader
- - [ ] External Mic through headphone jack
-
  
 ---
 ###  Basic Installation
 
 - Create a Bootable USB for OSx by using the guide by RehabMan [[Guide] Booting the OS X installer on LAPTOPS with Clover](https://www.tonymacx86.com/el-capitan-laptop-support/148093-guide-booting-os-x-installer-laptops-clover.html).
-- Install MacOS to you're SSD or hard drive.
-- Install [Clover Bootloader](https://sourceforge.net/projects/cloverefiboot) in you're SSD or hard drive.
+- Install MacOS to SSD / hard drive.
+- Install [Clover Bootloader](https://sourceforge.net/projects/cloverefiboot) into SSD / hard drive.
 - Copy the contains of this repo into clover folder of you're EFI.
-- **[IMPORTANT]** Make sure to Generate system definitions of MacBook pro 14.1 in config.plist file using [Clover Configurator](https://mackie100projects.altervista.org/download-clover-configurator/) or Else MacOS will not Boot! You can find Tutorial about it [Here](https://www.tonymacx86.com/threads/guide-how-to-configure-your-systems-smbios-correctly.198155/).
-- And as simple as that, you'll have a fully working Hackbook pro (with some exceptions)!
-- Keep reading below if you want to tweak the Hackbook for better performance..
+- **[IMPORTANT]** Make sure to Generate system definitions of MacBook pro 15.2 in config.plist file using [Clover Configurator](https://mackie100projects.altervista.org/download-clover-configurator/) or Else MacOS will not Boot! You can find Tutorial about it [Here](https://www.tonymacx86.com/threads/guide-how-to-configure-your-systems-smbios-correctly.198155/).
 
 ### Tweaking the HackBook..
 
-- Coming soon...
+- To fix the cracking sound from headphones, please see [ALCPlugFix](https://github.com/Siddhesh9146/Acer-E515-51G-Hackintosh/tree/master/ALCPlugFix)
 
 ----
 
 ### Info about the build
 
 #### Audio
-- The Sound Card is `Realtek ALC255`, which is drived by `AppleALC` on layout-id 31.
-- If headphones are not working, please see [ALCPlugFix](https://github.com/Siddhesh9146/Acer-E515-51G-Hackintosh/tree/master/ALCPlugFix).
+- The Sound Card is `Realtek ALC255`, which is drived by `AppleALC` on layout-id 3.
 
-    
 #### Bluetooth
 - The Native Atheros BT will work out-of-the Box, But you can't turn off the BT becouse Power Management is not supported;
 - To Fix this, you'll have to get a MacOS compatible wifi+BT card. The best choice will be BCM94352Z which has WiFi+BT.
