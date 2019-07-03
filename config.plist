@@ -21,7 +21,7 @@
 				<key>Comment-IRQ Fix</key>
 				<string>The following fixes may be needed for onboard audio/USB/etc</string>
 				<key>FixHPET</key>
-				<false/>
+				<true/>
 				<key>FixIPIC</key>
 				<false/>
 				<key>FixRTC</key>
@@ -33,120 +33,20 @@
 				<key>FixWAK</key>
 				<false/>
 			</dict>
-			<key>Name</key>
-			<string>DSDT.aml</string>
 			<key>Patches</key>
 			<array>
 				<dict>
 					<key>Comment</key>
-					<string>change EHC1 to EH01</string>
+					<string>change HECI to IMEI</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
 					<data>
-					RUhDMQ==
+					SEVDSQ==
 					</data>
 					<key>Replace</key>
 					<data>
-					RUgwMQ==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change EHC2 to EH02</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					RUhDMg==
-					</data>
-					<key>Replace</key>
-					<data>
-					RUgwMg==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change OSID to XSID (to avoid match against _OSI XOSI patch)</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					T1NJRA==
-					</data>
-					<key>Replace</key>
-					<data>
-					WFNJRA==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change _OSI to XOSI</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					X09TSQ==
-					</data>
-					<key>Replace</key>
-					<data>
-					WE9TSQ==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change _DSM to XDSM</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					X0RTTQ==
-					</data>
-					<key>Replace</key>
-					<data>
-					WERTTQ==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change EC0 to EC</string>
-					<key>Disabled</key>
-					<true/>
-					<key>Find</key>
-					<data>
-					RUMwXw==
-					</data>
-					<key>Replace</key>
-					<data>
-					RUNfXw==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change H_EC to EC</string>
-					<key>Disabled</key>
-					<true/>
-					<key>Find</key>
-					<data>
-					SF9FQw==
-					</data>
-					<key>Replace</key>
-					<data>
-					RUNfXw==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change ECDV to EC</string>
-					<key>Disabled</key>
-					<true/>
-					<key>Find</key>
-					<data>
-					RUNEVg==
-					</data>
-					<key>Replace</key>
-					<data>
-					RUNfXw==
+					SU1FSQ==
 					</data>
 				</dict>
 				<dict>
@@ -161,20 +61,6 @@
 					<key>Replace</key>
 					<data>
 					SERFRg==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change HECI to IMEI</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					SEVDSQ==
-					</data>
-					<key>Replace</key>
-					<data>
-					SU1FSQ==
 					</data>
 				</dict>
 				<dict>
@@ -238,7 +124,7 @@
 		<key>FixHeaders</key>
 		<true/>
 		<key>HaltEnabler</key>
-		<true/>
+		<false/>
 		<key>SSDT</key>
 		<dict>
 			<key>DropOem</key>
@@ -255,7 +141,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>dart=0 nv_disable=1 -v darkwake=no lilucpu=8 rootless=0 kext-dev-mode=1 -disablegfxfirmware</string>
+		<string>dart=0 nv_disable=1 -v darkwake=no lilucpu=8</string>
 		<key>DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>DisableCloverHotkeys</key>
@@ -263,7 +149,7 @@
 		<key>Legacy</key>
 		<string>PBR</string>
 		<key>NeverDoRecovery</key>
-		<true/>
+		<false/>
 		<key>NeverHibernate</key>
 		<true/>
 		<key>NoEarlyProgress</key>
@@ -271,7 +157,7 @@
 		<key>Secure</key>
 		<false/>
 		<key>Timeout</key>
-		<integer>3</integer>
+		<integer>5</integer>
 		<key>XMPDetection</key>
 		<string>Yes</string>
 	</dict>
@@ -390,8 +276,6 @@
 		</array>
 		<key>Audio</key>
 		<dict>
-			<key>Inject</key>
-			<integer>31</integer>
 			<key>ResetHDA</key>
 			<false/>
 		</dict>
@@ -419,10 +303,6 @@
 				<key>device-id</key>
 				<data>
 				FhkAAA==
-				</data>
-				<key>disable-external-gpu</key>
-				<data>
-				AQAAAA==
 				</data>
 				<key>framebuffer-con1-enable</key>
 				<integer>1</integer>
@@ -460,13 +340,13 @@
 				<key>hda-gfx</key>
 				<string>onboard-1</string>
 				<key>layout-id</key>
-				<integer>31</integer>
+				<integer>3</integer>
 			</dict>
 		</dict>
 		<key>USB</key>
 		<dict>
 			<key>AddClockID</key>
-			<false/>
+			<true/>
 			<key>FixOwnership</key>
 			<true/>
 			<key>HighCurrent</key>
@@ -474,8 +354,6 @@
 			<key>Inject</key>
 			<true/>
 		</dict>
-		<key>UseIntelHDMI</key>
-		<true/>
 	</dict>
 	<key>DisableDrivers</key>
 	<array>
@@ -566,8 +444,6 @@
 			<key>NVidia</key>
 			<false/>
 		</dict>
-		<key>ig-platform-id</key>
-		<string>0x191E0000</string>
 	</dict>
 	<key>KernelAndKextPatches</key>
 	<dict>
@@ -689,12 +565,8 @@
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
-		<key>Mobile</key>
-		<true/>
 		<key>ProductName</key>
-		<string>MacBookPro14,1</string>
-		<key>Trust</key>
-		<true/>
+		<string>MacBookPro15,2</string>
 	</dict>
 	<key>SystemParameters</key>
 	<dict>
