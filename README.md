@@ -63,7 +63,7 @@
 - Native brightness hotkey support; using DSDT.aml patched from RehabMan's [[Guide] Patching DSDT/SSDT for LAPTOP backlight control](https://www.tonymacx86.com/threads/guide-patching-dsdt-ssdt-for-laptop-backlight-control.152659/).
 
 #### Touchpad
-- The touchpad works After Installing VoodooPs2Controller.kext, After that Install ApplePS2SmartTouchpad.kext in order to recognise the touchpad as native one, And after that all gestures will work fine.
+- The touchpad works After Installing VoodooPs2Controller.kext, After that Install VoodooI2C.kext in order to recognise the touchpad as native one, And after that all gestures will work fine.
 
 #### USB
 - To Raise the Port Limit, We're using USBInjectAll.kext from RehabMan. You can also Find Patched SSDT-UIAC under ACPI/Patched Folder.
@@ -81,5 +81,4 @@
 - **Special Thanks** to [RehabMan](https://github.com/RehabMan).
 - Thanks to [Clover Bootloader](https://sourceforge.net/projects/cloverefiboot).
 - Thanks to [goodwin](https://github.com/goodwin/) for [ALCPlugfix](https://github.com/goodwin/ALCPlugFix).
-- Thanks to [EMlyDinEsH](https://osxlatitude.com/profile/7370-emlydinesh/) for [ApplePS2SmartTouchPad.kext](https://osxlatitude.com/forums/topic/1948-elan-focaltech-and-synaptics-smart-touchpad-driver-mac-os-x/).
 - Thanks to [daliansky](https://github.com/daliansky/) for Some Patches which I used here from [XiaoMi-Pro](https://github.com/daliansky/XiaoMi-Pro/).
