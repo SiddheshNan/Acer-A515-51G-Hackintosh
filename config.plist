@@ -498,24 +498,6 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>AirPo﻿rtBrcm4360 ﻿- fcvo﻿﻿</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				gflSqgAAdSk=
-				</data>
-				<key>InfoPlistPatch</key>
-				<false/>
-				<key>Name</key>
-				<string>com.apple.driver.AirPort.Brcm4360</string>
-				<key>Replace</key>
-				<data>
-				gflSqgAAZpA=
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>Remove 15 port limit completely 10.14 B2</string>
 				<key>Disabled</key>
 				<false/>
