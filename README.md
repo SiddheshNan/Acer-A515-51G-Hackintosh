@@ -1,6 +1,6 @@
 # Acer-A515-51G-Hackintosh
 #### Supports MacOS 10.13.x and 10.14.x
----
+
 ### What Works
  - [x] Audio w/ headphone jack
  - [x] CPU Speedstep (XCPM)
@@ -17,7 +17,10 @@
  - [x] WiFi (2.4 + 5GHz) + BT by using BCM94352z
  - [x] Native hotkey support w/ Fn keys
  
----
+ 
+ ![alt text](https://i.imgur.com/A0cKRrX.png  "Benchmarks")
+ 
+
 ###  Basic Installation
 
 - Create a Bootable USB for OSx by using the guide by RehabMan [[Guide] Booting the OS X installer on LAPTOPS with Clover](https://www.tonymacx86.com/el-capitan-laptop-support/148093-guide-booting-os-x-installer-laptops-clover.html).
@@ -46,16 +49,18 @@ $ sudo pmset -a autopoweroff 0
 
 - To fix the cracking sound from headphones, please see [ALCPlugFix](https://github.com/Siddhesh9146/Acer-E515-51G-Hackintosh/tree/master/ALCPlugFix).
 
-----
+---
  #### **If You Don't Have any Compatible WiFi Card installed then Please visit [without-wifi-patches(BCM94352Z) Branch](https://github.com/SiddheshNan/Acer-A515-51G-Hackintosh/tree/without-wifi-patches(BCM94352Z)) of this Repo.**
-----
+---
 
 ### Info about the Laptop
 
  
 - **Audio** : The Sound Card is `Realtek ALC255`, which is drived by `AppleALC` on `layout-id 3`.
 
-- **CPU** : Native CPU power management, using Pikar-Alpha's [ssdtPRGen](https://github.com/Piker-Alpha/ssdtPRGen.sh). & by injecting `plugin-type=1` using SSDT.
+- **CPU** : The CPU model is `i5-8250U` and XCPM power management is native supported.
+ - - XCPM and HWP are recommended to work together to reach better power management , using Pikar-Alpha's [ssdtPRGen](https://github.com/Piker-Alpha/ssdtPRGen.sh). & also by injecting `plugin-type=1` using SSDT.
+
 
 - **Graphics** : The iGPU is `Intel UHD Graphics 620`, and its enabled using `Ig-Platform-id=0x191E0000`.
 - - The discrete dGPU is `NVIDIA GeForce MX150`, and it is disabled becuase macOS doesn't support optimus technology. Plus battery life is much improved.
@@ -84,6 +89,7 @@ $ sudo pmset -a autopoweroff 0
 
 - **Bluetooth** : Stock Atheros BT will work out-of-the box, But you can't turn it off becouse BT power management is not supported;
 - - To Fix this you'll have to get a MacOS compatible WiFi+BT card. The best choice will be `BCM94352Z` which has WiFi+BT.
+
 
 ## Credits
 
