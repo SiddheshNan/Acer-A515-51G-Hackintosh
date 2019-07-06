@@ -91,4 +91,6 @@ $ sudo pmset -a autopoweroff 0
 - **Special Thanks** to [RehabMan](https://github.com/RehabMan).
 - Thanks to [Clover Bootloader](https://sourceforge.net/projects/cloverefiboot).
 - Thanks to [goodwin](https://github.com/goodwin/) for [ALCPlugfix](https://github.com/goodwin/ALCPlugFix).
+- Thanks to [alexandred](https://github.com/alexandred/VoodooI2C) for [VoodooI2C](https://github.com/alexandred/VoodooI2C).
 - Thanks to [daliansky](https://github.com/daliansky/) for Some Patches which I used here from [XiaoMi-Pro](https://github.com/daliansky/XiaoMi-Pro/).
+- Thanks to [Piker-Alpha](https://github.com/Piker-Alpha/) for [ssdtPRGen.sh](https://github.com/Piker-Alpha/ssdtPRGen.sh).
