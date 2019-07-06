@@ -19,6 +19,7 @@
  
  
  ![alt text](https://i.imgur.com/A0cKRrX.png  "Benchmarks")
+ - Geekbench Links : [Single+MultiCore](https://browser.geekbench.com/v4/cpu/13793813) , [GPU](https://browser.geekbench.com/v4/compute/4258348).
  
 
 ###  Basic Installation
