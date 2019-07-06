@@ -61,8 +61,7 @@ $ sudo pmset -a autopoweroff 0
 - **Audio** : The Sound Card is `Realtek ALC255`, which is drived by `AppleALC` on `layout-id 3`.
 
 - **CPU** : The CPU model is `i5-8250U` and XCPM power management is native supported.
- - - XCPM and HWP are recommended to work together to reach better power management , using Pikar-Alpha's [ssdtPRGen](https://github.com/Piker-Alpha/ssdtPRGen.sh). & also by injecting `plugin-type=1` using SSDT.
-
+ - - XCPM and HWP are recommended to work together to reach better power management, using Pikar-Alpha's [ssdtPRGen](https://github.com/Piker-Alpha/ssdtPRGen.sh). & also by injecting `plugin-type=1` using SSDT, and most importantly `CPUFriend.kext`.
 
 - **Graphics** : The iGPU is `Intel UHD Graphics 620`, and its enabled using `Ig-Platform-id=0x191E0000`.
 - - The discrete dGPU is `NVIDIA GeForce MX150`, and it is disabled becuase macOS doesn't support optimus technology. Plus battery life is much improved.
@@ -101,4 +100,3 @@ $ sudo pmset -a autopoweroff 0
 - Thanks to [goodwin](https://github.com/goodwin/) for [ALCPlugfix](https://github.com/goodwin/ALCPlugFix).
 - Thanks to [alexandred](https://github.com/alexandred/VoodooI2C) for [VoodooI2C](https://github.com/alexandred/VoodooI2C).
 - Thanks to [daliansky](https://github.com/daliansky/) for Some Patches which I used here from [XiaoMi-Pro](https://github.com/daliansky/XiaoMi-Pro/).
-- Thanks to [Piker-Alpha](https://github.com/Piker-Alpha/) for [ssdtPRGen.sh](https://github.com/Piker-Alpha/ssdtPRGen.sh).
