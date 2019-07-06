@@ -17,10 +17,11 @@
  - [x] WiFi (2.4 + 5GHz) + BT by using BCM94352z
  - [x] Native hotkey support w/ Fn keys
  
- 
  ![alt text](https://i.imgur.com/A0cKRrX.png  "Benchmarks")
- - Geekbench Links : [Single+MultiCore](https://browser.geekbench.com/v4/cpu/13793813) , [GPU](https://browser.geekbench.com/v4/compute/4258348).
- 
+  - Geekbench Score : 
+  - - Single-Core Score : 4219 [Link](https://browser.geekbench.com/v4/cpu/13793813).
+  - - Multi-Core Score : 14837 [Link](https://browser.geekbench.com/v4/cpu/13793813).
+  - - GPU OpenCL Score : 31191 [Link](https://browser.geekbench.com/v4/compute/4258348).
 
 ###  Basic Installation
 
