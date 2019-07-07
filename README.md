@@ -25,7 +25,7 @@
 
 ###  Basic Installation
 
-- Create a Bootable USB for OSx by using the guide by RehabMan [[Guide] Booting the OS X installer on LAPTOPS with Clover](https://www.tonymacx86.com/el-capitan-laptop-support/148093-guide-booting-os-x-installer-laptops-clover.html).
+- Create a Bootable USB for MacOS by using the guide by RehabMan [[Guide] Booting the OS X installer on LAPTOPS with Clover](https://www.tonymacx86.com/el-capitan-laptop-support/148093-guide-booting-os-x-installer-laptops-clover.html).
 - Install MacOS to SSD / hard drive.
 - Install [Clover Bootloader](https://sourceforge.net/projects/cloverefiboot) into SSD / hard drive.
 - Copy **ALL** the contains of this Repo into **CLOVER** Folder inside the EFI partition of SSD / hard drive.
@@ -60,11 +60,12 @@ $ sudo pmset -a autopoweroff 0
  
 - **Audio** : The Sound Card is `Realtek ALC255`, which is drived by `AppleALC` on `layout-id 3`.
 
-- **CPU** : The CPU model is `i5-8250U` and XCPM power management is native supported.
+- **CPU** : The CPU model is `i5-8250U` and XCPM power management is natively supported.
  - - XCPM and HWP are recommended to work together to reach better power management, using Pikar-Alpha's [ssdtPRGen](https://github.com/Piker-Alpha/ssdtPRGen.sh). & also by injecting `plugin-type=1` using SSDT, and most importantly `CPUFriend.kext`.
 
 - **Graphics** : The iGPU is `Intel UHD Graphics 620`, and its enabled using `Ig-Platform-id=0x191E0000`.
 - - The discrete dGPU is `NVIDIA GeForce MX150`, and it is disabled becuase macOS doesn't support optimus technology. Plus battery life is much improved.
+- - The color branding is fixed with Intel Skylake spoof and EDID fix.
 - - Native brightness hotkey support; using DSDT.aml patched from RehabMan's [[Guide] Patching DSDT/SSDT for LAPTOP backlight control](https://www.tonymacx86.com/threads/guide-patching-dsdt-ssdt-for-laptop-backlight-control.152659/).
 
 - **Battery** : Battery Management using `SMCBatteryManager.kext`.
