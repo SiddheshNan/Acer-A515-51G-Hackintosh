@@ -65,7 +65,7 @@ $ sudo pmset -a autopoweroff 0
 
 - **Graphics** : The iGPU is `Intel UHD Graphics 620`, and its enabled using `Ig-Platform-id=0x191E0000`.
 - - The discrete dGPU is `NVIDIA GeForce MX150`, and it is disabled becuase macOS doesn't support optimus technology. Plus battery life is much improved.
-- - The color branding is fixed with Intel Skylake spoof and EDID fix.
+- - The color branding or corrupted color depth  is fixed with Intel Skylake spoof and EDID fix.
 - - Native brightness hotkey support; using DSDT.aml patched from RehabMan's [[Guide] Patching DSDT/SSDT for LAPTOP backlight control](https://www.tonymacx86.com/threads/guide-patching-dsdt-ssdt-for-laptop-backlight-control.152659/).
 
 - **Battery** : Battery Management using `SMCBatteryManager.kext`.
