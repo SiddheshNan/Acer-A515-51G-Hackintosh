@@ -61,11 +61,11 @@ $ sudo pmset -a autopoweroff 0
 - **Audio** : The Sound Card is `Realtek ALC255`, which is drived by `AppleALC` on `layout-id 3`.
 
 - **CPU** : The CPU model is `i5-8250U` and XCPM power management is natively supported.
- - - XCPM and HWP are recommended to work together to reach better power management, using Pikar-Alpha's [ssdtPRGen](https://github.com/Piker-Alpha/ssdtPRGen.sh). & also by injecting `plugin-type=1` using SSDT, and most importantly `CPUFriend.kext`.
+ - - XCPM and HWP are recommended to work together to reach better power management, by injecting `plugin-type=1` with `SSDT-XCPM`, and using `CPUFriend.kext`.
 
 - **Graphics** : The iGPU is `Intel UHD Graphics 620`, and its enabled using `Ig-Platform-id=0x191E0000`.
 - - The discrete dGPU is `NVIDIA GeForce MX150`, and it is disabled becuase macOS doesn't support optimus technology. Plus battery life is much improved.
-- - The color branding or corrupted color depth  is fixed with Intel Skylake spoof and EDID fix.
+- - The color branding or corrupted color depth is fixed with Intel Skylake spoof and EDID fix.
 - - Native brightness hotkey support; using DSDT.aml patched from RehabMan's [[Guide] Patching DSDT/SSDT for LAPTOP backlight control](https://www.tonymacx86.com/threads/guide-patching-dsdt-ssdt-for-laptop-backlight-control.152659/).
 
 - **Battery** : Battery Management using `SMCBatteryManager.kext`.
@@ -86,7 +86,7 @@ $ sudo pmset -a autopoweroff 0
 - **Wi-Fi** : Stock WiFi Card is `Atheros QCA9377` It is not supported on MacOS.
 - - Best Choice will be to replace current Card with `BCM94352Z` which has WiFI+BT, or `BCM943602BAED`. You can find it on AliExpress for like $20-30. I Have Already Changed My Current WiFi card with `BCM94352Z`.
 - - Config.plist is already patched for `BCM94352Z` and `BCM943602BAED` & added kexts for BT as well.
-- - Keep in mind, this laptop uses **M.2(NGFF)** Socket with **A+E Key**. Half size Card Won't Work.
+- - Keep in mind, this laptop uses **M.2(NGFF)** Socket with **A+E Key**. Half size card won't work.
 - - **If You Don't Have Compatible WiFi Card Installed then Please visit [without-wifi-patches(BCM94352Z) Branch](https://github.com/SiddheshNan/Acer-A515-51G-Hackintosh/tree/without-wifi-patches(BCM94352Z)) of this Repo.**
 
 - **Bluetooth** : Stock Atheros BT will work out-of-the box, But you can't turn it off becouse BT power management is not supported;
@@ -99,5 +99,5 @@ $ sudo pmset -a autopoweroff 0
 - **Special Thanks** to [RehabMan](https://github.com/RehabMan).
 - Thanks to [Clover Bootloader](https://sourceforge.net/projects/cloverefiboot).
 - Thanks to [goodwin](https://github.com/goodwin/) for [ALCPlugfix](https://github.com/goodwin/ALCPlugFix).
-- Thanks to [alexandred](https://github.com/alexandred/VoodooI2C) for [VoodooI2C](https://github.com/alexandred/VoodooI2C).
+- Thanks to [alexandred](https://github.com/alexandred/) for [VoodooI2C](https://github.com/alexandred/VoodooI2C).
 - Thanks to [daliansky](https://github.com/daliansky/) for Some Patches which I used here from [XiaoMi-Pro](https://github.com/daliansky/XiaoMi-Pro/).
