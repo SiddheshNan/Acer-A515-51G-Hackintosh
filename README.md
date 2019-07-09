@@ -105,7 +105,7 @@ $ sudo pmset -a autopoweroff 0
 - **Touchpad** : Native I2C touchpad support using `VoodooI2C.kext`; Set touchpad Mode to Advance from `BIOS` & All gestures will work fine.
 
 - **USB** : Custom `SSDT-UIAC.aml` SSDT for `USBInjectAll.kext` that configures USB ports on XHC such that the port limit patch is not needed, and each UsbConnnector value is correct for each port.
-- - You can also find USB port mapping for `SSDT-UIAC` [Here](https://github.com/SiddheshNan/Acer-A515-51G-Hackintosh/blob/master/USB%20port%20mapping%20for%20SSDT-UIAC.txt).
+- - You can also find USB port mapping for `SSDT-UIAC` [Here](https://github.com/SiddheshNan/Acer-A515-51G-Hackintosh/blob/master/USB%20port%20mapping%20for%20SSDT-UIAC.md).
 
 
 - **Wi-Fi** : Stock WiFi Card is `Atheros QCA9377` It is not supported on MacOS.

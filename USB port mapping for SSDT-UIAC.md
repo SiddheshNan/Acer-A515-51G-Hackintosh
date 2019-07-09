@@ -1,11 +1,11 @@
-# SSDT-UIAC Config of USBInjectAll for Acer A515-51G.
+# USB Port Mappings for SSDT-UIAC
 
 
 | USB 2.0   |          | USB 3.0   |          |
 |-----------|----------|-----------|----------|
 | Port NAME | Port ADR | Port NAME | Port ADR |
 | HS01      | 1        | SS02      | 10       |
-| HS02      | 2        | SS01      |          |
+| HS02      | 2        | SS01      | 11       |
 | HS03      | 3        |           |          |
 | HS04      | 4        |           |          |
 | HS05      | 5        |           |          |
@@ -53,7 +53,7 @@
 
 
 
-## You can Find Patched SSDT-UIAC.dsl and SSDT-UIAC.aml under ACPI/Patched Folder.
+### You can Find Patched SSDT-UIAC.dsl and SSDT-UIAC.aml under ACPI/Patched Folder.
  
  
 
