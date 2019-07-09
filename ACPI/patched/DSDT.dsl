@@ -17769,6 +17769,7 @@ DefinitionBlock ("", "DSDT", 2, "ACRSYS", "ACRPRDCT", 0x00000000)
             \_SB.PCI0.LPCB.ECFG (Zero)
             Store (Zero, \_PR.CPPC)
         }
+        If (5 == Arg0) { \_SB.PCI0.XHC.PMEE = 0 }
     }
 
     Method (_WAK, 1, Serialized)  // _WAK: Wake

@@ -21,13 +21,13 @@
 				<key>Comment-IRQ Fix</key>
 				<string>The following fixes may be needed for onboard audio/USB/etc</string>
 				<key>FixHPET</key>
-				<true/>
+				<false/>
 				<key>FixIPIC</key>
 				<false/>
 				<key>FixRTC</key>
 				<false/>
 				<key>FixShutdown</key>
-				<true/>
+				<false/>
 				<key>FixTMR</key>
 				<false/>
 				<key>FixWAK</key>
@@ -444,6 +444,8 @@
 			<key>NVidia</key>
 			<false/>
 		</dict>
+		<key>ig-platform-id</key>
+		<string>0x191E0000</string>
 	</dict>
 	<key>KernelAndKextPatches</key>
 	<dict>
