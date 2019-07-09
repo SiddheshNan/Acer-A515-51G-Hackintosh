@@ -1,5 +1,10 @@
 # Acer-A515-51G-Hackintosh
-#### Supports MacOS 10.13.x and 10.14.x
+#### Supports MacOS 10.14.x and 10.13.x
+
+<p align="center">
+  <img src="https://i.imgur.com/Kq1z0hh.png" alt="Specs">
+</p>
+
 
 ## Whats Working...
  - [x] Audio w/ headphone jack
@@ -17,16 +22,28 @@
  - [x] WiFi (2.4 + 5GHz) + BT by using BCM94352z
  - [x] Native hotkey support w/ Fn keys
 
- ![alt text](https://i.imgur.com/A0cKRrX.png  "Benchmarks")
+<p align="center">
+  <img src="https://i.imgur.com/A0cKRrX.png" alt="Benchmarks">
+</p>
+
   - Geekbench Score :
   - - Single-Core Score : 4219 [Link](https://browser.geekbench.com/v4/cpu/13793813).
   - - Multi-Core Score : 14837 [Link](https://browser.geekbench.com/v4/cpu/13793813).
   - - GPU OpenCL Score : 31191 [Link](https://browser.geekbench.com/v4/compute/4258348).
 
- ## 🔴 Warning
+ ## Warning
  #### **If you don't have any compatible WiFi card installed, then please visit [without-wifi-patches(BCM94352Z) Branch](https://github.com/SiddheshNan/Acer-A515-51G-Hackintosh/tree/without-wifi-patches(BCM94352Z)) of this repo.**
+ 
+## Installation
+ 
+ ### BIOS Settings
+* *Security* → Set supervisor password (to disable secure boot)
+* *Security* → Password on boot → **Disable**
+* *Boot* → Secure Boot → **Disable**
+* *Boot* → Boot Mode → **UEFI**
+* *Main* → Touchpad → Set touchpad mode → **Advance**
+* *Main* → Lid Open resume → **Enabled**
 
- ---
 
 ###  Basic Installation
 
@@ -56,11 +73,14 @@ $ sudo pmset -a autopoweroff 0
 
 - To fix the cracking sound from headphones, please see [ALCPlugFix](https://github.com/Siddhesh9146/Acer-E515-51G-Hackintosh/tree/master/ALCPlugFix).
 
----
-### ⭐ Please consider starring this repository if it helped you! ⭐
----
 
-## Info about the Laptop
+
+<p align="center">
+<b>⭐ Please consider starring this repository if it helped you! ⭐</b>
+</p>
+
+---
+### Laptop configuration
 
 
 - **Audio** : The Sound Card is `Realtek ALC255`, which is driven by `AppleALC` on `layout-id 3`.
