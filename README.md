@@ -48,7 +48,7 @@
 ###  Basic Installation
 
 - Create a Bootable USB for MacOS by using the Guide by RehabMan [[Guide] Booting the OS X installer on LAPTOPS with Clover](https://www.tonymacx86.com/el-capitan-laptop-support/148093-guide-booting-os-x-installer-laptops-clover.html).
-- Install MacOS to SSD / Hard drive. (While installing connect USB keyboard and mouse because I2C is not supported during instalation)
+- Install MacOS to SSD / Hard drive. (While installing connect USB keyboard and mouse because I2C is not supported during installation)
 - Install [Clover Bootloader](https://sourceforge.net/projects/cloverefiboot) into SSD / hard drive.
 - Copy **ALL** the Contains of this Repo into **CLOVER** Folder inside the EFI partition of SSD / Hard drive.
 - **[IMPORTANT]** Make sure to Generate system definitions of MacBook pro 15.2 in config.plist file using [Clover Configurator](https://mackie100projects.altervista.org/download-clover-configurator/) or else MacOS will not Boot! You can find Tutorial about it [Here](https://www.tonymacx86.com/threads/guide-how-to-configure-your-systems-smbios-correctly.198155/).
@@ -118,8 +118,8 @@ $ sudo trimforce enable
 
 
 - **Wi-Fi** : Stock WiFi Card is `Atheros QCA9377` It is not supported on MacOS.
-- - Best Choice will be to replace current Card with `BCM94352Z` which has WiFi+BT, or . You can find it on AliExpress for like $20-30. I Have already changed my current WiFi card with `BCM94352Z (Lenovo's 04x6020`)`.
-- - This `BCM94352Z` Card comes from 2 manufacturer called:
+- - Best Choice will be to replace current Card with `BCM94352Z` which has WiFi+BT, or . You can find it on AliExpress for like $20-30. I Have already changed my current WiFi card with `BCM94352Z (Lenovo's 04x6020)`.
+- - This `BCM94352Z` card comes from 2 manufacturer called:
 - - - 1. DELL - mainly called `DW1560` - has `A key NGFF notch` - much expensive
 - - - 2. Lenovo - mainly called `04x6020` - has `E key NGFF notch` - not so expensive
 - - The Dell's `DW1560` is much expensive and is only recommened for laptops with `A key NGFF notch` & also laptops which have whitelisted cards from certain vendors. 
