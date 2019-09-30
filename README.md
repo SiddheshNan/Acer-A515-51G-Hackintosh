@@ -21,7 +21,7 @@
  - [x] Sleep From (Lid)
  - [x] WiFi (2.4 + 5GHz) + BT by using BCM94352z
  - [x] Native hotkey support w/ Fn keys
-
+ - [x] Internal SD card Reader
 <p align="center">
   <img src="https://i.imgur.com/A0cKRrX.png" alt="Benchmarks">
 </p>
@@ -131,6 +131,8 @@ $ sudo trimforce enable
 - **Bluetooth** : Stock `Atheros QCA9377` BT will work out-of-the box, But you can't turn it off becouse BT power management is not supported;
 - - To Fix this you'll have to get a MacOS compatible WiFi+BT card. The best choice will be `BCM94352Z` which has WiFi+BT.
 
+- **SD Card Reader** : Internal SD Card Support using Modified Sinetek's rtsx Driver.
+
 
 ## Credits
 
@@ -139,4 +141,6 @@ $ sudo trimforce enable
 - Thanks to [Clover Bootloader](https://sourceforge.net/projects/cloverefiboot).
 - Thanks to [goodwin](https://github.com/goodwin/) for [ALCPlugfix](https://github.com/goodwin/ALCPlugFix).
 - Thanks to [alexandred](https://github.com/alexandred/) for [VoodooI2C](https://github.com/alexandred/VoodooI2C).
+- Thanks to [Sinetek](https://github.com/sinetek) for [Sinetek-rtsx](https://github.com/sinetek/Sinetek-rtsx).
+- Thanks to [al3xtjames](https://github.com/al3xtjames) for [NoTouchID](https://github.com/al3xtjames/NoTouchID).
 - Thanks to [daliansky](https://github.com/daliansky/) for Some Patches which I used here from [XiaoMi-Pro](https://github.com/daliansky/XiaoMi-Pro/).
