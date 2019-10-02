@@ -21,13 +21,13 @@
 				<key>Comment-IRQ Fix</key>
 				<string>The following fixes may be needed for onboard audio/USB/etc</string>
 				<key>FixHPET</key>
-				<true/>
+				<false/>
 				<key>FixIPIC</key>
 				<false/>
 				<key>FixRTC</key>
 				<false/>
 				<key>FixShutdown</key>
-				<true/>
+				<false/>
 				<key>FixTMR</key>
 				<false/>
 				<key>FixWAK</key>
@@ -444,6 +444,8 @@
 			<key>NVidia</key>
 			<false/>
 		</dict>
+		<key>ig-platform-id</key>
+		<string>0x191E0000</string>
 	</dict>
 	<key>KernelAndKextPatches</key>
 	<dict>
@@ -512,24 +514,6 @@
 				<key>Replace</key>
 				<data>
 				g/saD4MDBQAA
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Enable TRIM for SSD</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				AEFQUExFIFNTRAA=
-				</data>
-				<key>InfoPlistPatch</key>
-				<false/>
-				<key>Name</key>
-				<string>com.apple.iokit.IOAHCIBlockStorage</string>
-				<key>Replace</key>
-				<data>
-				AAAAAAAAAAAAAAA=
 				</data>
 			</dict>
 		</array>
