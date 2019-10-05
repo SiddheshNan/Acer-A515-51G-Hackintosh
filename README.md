@@ -19,7 +19,6 @@
  - [x] WebCam
  - [x] Usb 3.0 + Type C
  - [x] Sleep From (Lid)
- - [x] WiFi (2.4 + 5GHz) + BT by using BCM94352z
  - [x] Native hotkey support w/ Fn keys
  - [x] Internal SD card Reader
 <p align="center">
@@ -31,9 +30,6 @@
   - - Multi-Core Score : 14837 [Link](https://browser.geekbench.com/v4/cpu/13793813).
   - - GPU OpenCL Score : 31191 [Link](https://browser.geekbench.com/v4/compute/4258348).
 
- ## Warning
- #### **If you don't have any compatible WiFi card installed, then please visit [without-wifi-patches(BCM94352Z) Branch](https://github.com/SiddheshNan/Acer-A515-51G-Hackintosh/tree/without-wifi-patches(BCM94352Z)) of this repo.**
- 
 ## Installation
  
  ### BIOS Settings
@@ -126,7 +122,6 @@ $ sudo trimforce enable
 - - On the other hand Lenovo's `04x6020` has `E key NGFF` notch and is much cheaper than `DW1560`, This laptop supports both & you are free to choose between the two.
 - - Keep in mind, this laptop uses **M.2(NGFF)** Socket with **A+E Key**. Half size card won't work.
 - - Config.plist is already patched for `BCM94352Z` and `BCM943602BAED` & added kexts for BT as well.
-- - **If You Don't Have Compatible WiFi Card Installed then Please visit [without-wifi-patches(BCM94352Z) Branch](https://github.com/SiddheshNan/Acer-A515-51G-Hackintosh/tree/without-wifi-patches(BCM94352Z)) of this Repo.**
 
 - **Bluetooth** : Stock `Atheros QCA9377` BT will work out-of-the box, But you can't turn it off becouse BT power management is not supported;
 - - To Fix this you'll have to get a MacOS compatible WiFi+BT card. The best choice will be `BCM94352Z` which has WiFi+BT.
