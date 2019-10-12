@@ -1,8 +1,8 @@
 # Acer-A515-51G-Hackintosh
-#### Supports MacOS 10.14.x and 10.13.x
+#### Supports MacOS 10.15.x, 10.14.x and 10.13.x
 
 <p align="center">
-  <img src="https://i.imgur.com/Kq1z0hh.png" alt="Specs">
+  <img src="https://i.imgur.com/s5tJPnX.png" alt="Specs">
 </p>
 
 
@@ -21,6 +21,7 @@
  - [x] Sleep From (Lid)
  - [x] Native hotkey support w/ Fn keys
  - [x] Internal SD card Reader
+
 <p align="center">
   <img src="https://i.imgur.com/A0cKRrX.png" alt="Benchmarks">
 </p>
@@ -31,7 +32,7 @@
   - - GPU OpenCL Score : 31191 [Link](https://browser.geekbench.com/v4/compute/4258348).
 
 ## Installation
- 
+
  ### BIOS Settings
 * *Security* → Set supervisor password (to disable secure boot)
 * *Security* → Password on boot → **Disable**
@@ -118,7 +119,7 @@ $ sudo trimforce enable
 - - This `BCM94352Z` card comes from 2 manufacturer called:
 - - - 1. DELL - mainly called `DW1560` - has `A key NGFF notch` - much expensive
 - - - 2. Lenovo - mainly called `04x6020` - has `E key NGFF notch` - not so expensive
-- - The Dell's `DW1560` is much expensive and is only recommened for laptops with `A key NGFF notch` & also laptops which have whitelisted cards from certain vendors. 
+- - The Dell's `DW1560` is much expensive and is only recommened for laptops with `A key NGFF notch` & also laptops which have whitelisted cards from certain vendors.
 - - On the other hand Lenovo's `04x6020` has `E key NGFF` notch and is much cheaper than `DW1560`, This laptop supports both & you are free to choose between the two.
 - - Keep in mind, this laptop uses **M.2(NGFF)** Socket with **A+E Key**. Half size card won't work.
 - - Config.plist is already patched for `BCM94352Z` and `BCM943602BAED` & added kexts for BT as well.

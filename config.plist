@@ -119,6 +119,20 @@
 					SUdQVQhfQURSDAAAAgA=
 					</data>
 				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change EC0 to EC</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					RUMwXw==
+					</data>
+					<key>Replace</key>
+					<data>
+					RUNfXw==
+					</data>
+				</dict>
 			</array>
 		</dict>
 		<key>FixHeaders</key>
@@ -531,8 +545,12 @@
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
+		<key>Mobile</key>
+		<true/>
 		<key>ProductName</key>
 		<string>MacBookPro15,2</string>
+		<key>Trust</key>
+		<true/>
 	</dict>
 	<key>SystemParameters</key>
 	<dict>
