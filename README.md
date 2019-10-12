@@ -1,8 +1,8 @@
 # Acer-A515-51G-Hackintosh
-#### Supports MacOS 10.14.x and 10.13.x
+#### Supports MacOS 10.15.x, 10.14.x and 10.13.x
 
 <p align="center">
-  <img src="https://i.imgur.com/Kq1z0hh.png" alt="Specs">
+  <img src="https://i.imgur.com/s5tJPnX.png" alt="Specs">
 </p>
 
 
@@ -22,6 +22,7 @@
  - [x] WiFi (2.4 + 5GHz) + BT by using BCM94352z
  - [x] Native hotkey support w/ Fn keys
  - [x] Internal SD card Reader
+ 
 <p align="center">
   <img src="https://i.imgur.com/A0cKRrX.png" alt="Benchmarks">
 </p>
@@ -143,4 +144,5 @@ $ sudo trimforce enable
 - Thanks to [alexandred](https://github.com/alexandred/) for [VoodooI2C](https://github.com/alexandred/VoodooI2C).
 - Thanks to [Sinetek](https://github.com/sinetek) for [Sinetek-rtsx](https://github.com/sinetek/Sinetek-rtsx).
 - Thanks to [al3xtjames](https://github.com/al3xtjames) for [NoTouchID](https://github.com/al3xtjames/NoTouchID).
+- Thanks to [headkaze](https://www.insanelymac.com/forum/profile/1364628-headkaze/) for [Catalina BT Patches](https://www.insanelymac.com/forum/topic/339175-brcmpatchram2-for-1015-catalina-broadcom-bluetooth-firmware-upload/).
 - Thanks to [daliansky](https://github.com/daliansky/) for Some Patches which I used here from [XiaoMi-Pro](https://github.com/daliansky/XiaoMi-Pro/).
