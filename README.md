@@ -1,6 +1,8 @@
 # Acer-A515-51G-Hackintosh
 #### Supports MacOS 10.15.x, 10.14.x and 10.13.x
 
+[![Join the chat at https://gitter.im/Acer-A515-51G-Hackintosh](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Acer-A515-51G-Hackintosh/community)
+
 <p align="center">
   <img src="https://i.imgur.com/s5tJPnX.png" alt="Specs">
 </p>
