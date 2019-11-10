@@ -130,7 +130,8 @@ $ sudo trimforce enable
 - - - 1. DELL - mainly called `DW1560` - has `A key NGFF notch` - much expensive
 - - - 2. Lenovo - mainly called `04x6020` - has `E key NGFF notch` - not so expensive
 - - The Dell's `DW1560` is much expensive and is only recommended for laptops with `A key NGFF notch` & also laptops which have whitelisted cards from certain vendors.
-- - On the other hand Lenovo's `04x6020` has `E key NGFF` notch and is much cheaper than `DW1560`, This laptop supports both & you are free to choose between the two.
+- - On the other hand Lenovo's `04x6020` has `E key NGFF` notch and is much cheaper than `DW1560`.
+- - **This laptop supports both & you are free to choose between the two.**
 - - Keep in mind, this laptop uses **M.2(NGFF)** Socket with **A+E Key**. Half size card won't work.
 - - Config.plist is already patched for `BCM94352Z` and `BCM943602BAED` & added kexts for BT as well.
 - - **If You Don't Have Compatible WiFi Card Installed then Please visit [without-wifi-patches(BCM94352Z) Branch](https://github.com/SiddheshNan/Acer-A515-51G-Hackintosh/tree/without-wifi-patches(BCM94352Z)) of this Repo.**
