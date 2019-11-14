@@ -1,6 +1,9 @@
-[![Join the chat at https://gitter.im/Acer-A515-51G-Hackintosh](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Acer-A515-51G-Hackintosh/community)
+
 
 # Acer-A515-51G-Hackintosh
+
+[![Join the chat at https://gitter.im/Acer-A515-51G-Hackintosh](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Acer-A515-51G-Hackintosh/community)
+
 #### Supports MacOS 10.15.x, 10.14.x and 10.13.x
 
 <p align="center">
@@ -8,21 +11,22 @@
 </p>
 
 
-## Whats Working...
- - [x] Audio w/ headphone jack
+## What's Working...
+ - [x] Audio & headphone jack
  - [x] CPU Speedstep (XCPM)
  - [x] iGPU with disabled dGPU
+ - [x] Fully Functional QE/CI Enabled Graphics
  - [x] Battery Management
- - [x] Backlight
+ - [x] ACPI Display brightness with hot keys / slider
  - [x] Ethernet
+ - [x] Internal SD card Reader
  - [x] HDMI + Audio
  - [x] Sleep + Wake
  - [x] Smart Touchpad + Gestures (using I2C)
  - [x] WebCam
  - [x] Usb 3.0 + Type C
- - [x] Sleep From (Lid)
- - [x] Native hotkey support w/ Fn keys
- - [x] Internal SD card Reader
+ - [x] Sleep From Lid
+ - [x] Native hotkey support with Fn keys
 
 <p align="center">
   <img src="https://i.imgur.com/A0cKRrX.png" alt="Benchmarks">
@@ -46,9 +50,9 @@
 
 ###  Basic Installation
 
-- Create a Bootable USB for MacOS by using the Guide by RehabMan [[Guide] Booting the OS X installer on LAPTOPS with Clover](https://www.tonymacx86.com/el-capitan-laptop-support/148093-guide-booting-os-x-installer-laptops-clover.html).
-- Install MacOS to SSD / Hard drive. (While installing connect USB keyboard and mouse because I2C is not supported during installation)
-- Install [Clover Bootloader](https://sourceforge.net/projects/cloverefiboot) into SSD / hard drive.
+- Create a Bootable USB for MacOS by using my [USB Installation Guide](https://github.com/SiddheshNan/Acer-A515-51G-Hackintosh/blob/master/USB-Installation-Guide.md) OR by RehabMan's [[Guide] Booting the OS X installer on LAPTOPS with Clover](https://www.tonymacx86.com/el-capitan-laptop-support/148093-guide-booting-os-x-installer-laptops-clover.html).
+- Install MacOS to SSD / Hard drive. (While installing, connect USB keyboard and mouse because I2C is not supported during installation)
+- Install [Clover Bootloader](https://github.com/CloverHackyColor/CloverBootloader/releases) into SSD / hard drive.
 - Copy **ALL** the Contains of this Repo into **CLOVER** Folder inside the EFI partition of SSD / Hard drive.
 - **[IMPORTANT]** Make sure to Generate system definitions of MacBook pro 15.2 in config.plist file using [Clover Configurator](https://mackie100projects.altervista.org/download-clover-configurator/) or else MacOS will not Boot! You can find Tutorial about it [Here](https://www.tonymacx86.com/threads/guide-how-to-configure-your-systems-smbios-correctly.198155/).
 
@@ -99,18 +103,18 @@ $ sudo trimforce enable
 - **Graphics** : The iGPU is `Intel UHD Graphics 620`, and its enabled using `Ig-Platform-id=0x191E0000`.
 - - The discrete dGPU is `NVIDIA GeForce MX150`, and it is disabled because macOS doesn't support optimus technology. Plus battery life is much improved.
 - - The colour branding or corrupted colour depth is fixed with Intel Skylake spoof and EDID fix.
-- - Native brightness hotkey support; using `DSDT.aml` patched from RehabMan's [[Guide] Patching DSDT/SSDT for LAPTOP backlight control](https://www.tonymacx86.com/threads/guide-patching-dsdt-ssdt-for-laptop-backlight-control.152659/).
+- - Native brightness hotkey support using `DSDT.aml`.
 
 - **Battery** : Battery Management using `SMCBatteryManager.kext`.
 
-- **Backlight** : Native Brightness control using `AppleBacklightFixup.kext` & `SSDT-PNLF.aml`.
+- **Backlight** : Native Brightness control using `SSDT-PNLF.aml`.
 
 - **Ethernet** : Gigabit Ethernet using `RealtekRTL8111.kext`.
 
 - **HDMI** : Intel Framebuffer patches to change the connector-type to match the physical connector, using `WhateverGreen.kext`.
 - - **HDMI Audio** : Injecting property `"hda-gfx" = "onboard-1"` on HDAU, IGPU, HDEF objects & also injecting `layout-id 3` on HDAU to match layout-id on HDEF.
 
-- **Touchpad** : Native I2C touchpad support using `VoodooI2C.kext`; Set touchpad Mode to Advance from `BIOS` & All gestures will work fine.
+- **Touchpad** : Native I2C touchpad support using `VoodooI2C.kext`; Set touchpad Mode to `Advance` from `BIOS` & All gestures will work fine.
 
 - **USB** : Custom `SSDT-UIAC.aml` SSDT for `USBInjectAll.kext` that configures USB ports on XHC such that the port limit patch is not needed, and each UsbConnnector value is correct for each port.
 - - You can also find USB port mapping for `SSDT-UIAC` [Here](https://github.com/SiddheshNan/Acer-A515-51G-Hackintosh/blob/master/USB%20port%20mapping%20for%20SSDT-UIAC.md).
@@ -121,12 +125,11 @@ $ sudo trimforce enable
 - - This `BCM94352Z` card comes from 2 manufacturer called:
 - - - 1. DELL - mainly called `DW1560` - has `A key NGFF notch` - much expensive
 - - - 2. Lenovo - mainly called `04x6020` - has `E key NGFF notch` - not so expensive
-- - The Dell's `DW1560` is much expensive and is only recommened for laptops with `A key NGFF notch` & also laptops which have whitelisted cards from certain vendors.
+- - The Dell's `DW1560` is much expensive and is only recommended for laptops with `A key NGFF notch` & also laptops which have whitelisted cards from certain vendors.
 - - On the other hand Lenovo's `04x6020` has `E key NGFF` notch and is much cheaper than `DW1560`, This laptop supports both & you are free to choose between the two.
 - - Keep in mind, this laptop uses **M.2(NGFF)** Socket with **A+E Key**. Half size card won't work.
-- - Config.plist is already patched for `BCM94352Z` and `BCM943602BAED` & added kexts for BT as well.
 
-- **Bluetooth** : Stock `Atheros QCA9377` BT will work out-of-the box, But you can't turn it off becouse BT power management is not supported;
+- **Bluetooth** : Stock `Atheros QCA9377` BT will work out-of-the box, But you can't turn it off because BT power management is not supported;
 - - To Fix this you'll have to get a MacOS compatible WiFi+BT card. The best choice will be `BCM94352Z` which has WiFi+BT.
 
 - **SD Card Reader** : Internal SD Card Support using Modified Sinetek's rtsx Driver.
