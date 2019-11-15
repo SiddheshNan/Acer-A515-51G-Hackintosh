@@ -1,8 +1,8 @@
 ## [Working] Keyboard fix for MacOS 
 
-Many people have reported a problem that their Keyboard is not working after installation of MacOS.
-Upon Further Investigation, I Have found that `BIOS` version might affect this.
-You need v1.19 `BIOS` verion. In Any other `BIOS` version than this, the MacOS *might* not work.
+Many people have reported a problem that their Keyboard is not working after installation of MacOS. <br />
+Upon Further Investigation, I Have found that `BIOS` version might affect this. <br />
+You need v1.19 `BIOS` version. In Any other `BIOS` version than this, the Keyboard *might* not work. <br />
 
 ### Really Simple Fix - Courtesy of @[rahulbablu](https://github.com/rahulbablu)
 
@@ -23,5 +23,11 @@ You need v1.19 `BIOS` verion. In Any other `BIOS` version than this, the MacOS *
 - It will skip BIOS version check
 
 #### Above method is Tested and Reported to work `OK`.
+
+If windows does not work properly after downgrading the `BIOS`, Please Re-Install Windows. Because After Downgrading the `BIOS` the ACPI tables are changed and Windows will still expect the older ACPI tables(which are changed) & due to this, Windown won't boot. <br />
+This is a Rare occurrence and it might NOT affect you at ALL. but if it does, Just reinstall Windows and you are good to go!
+
+#### If you have any issue, Please send message to [Gitter](https://gitter.im/Acer-A515-51G-Hackintosh/community) [![Join the chat at https://gitter.im/Acer-A515-51G-Hackintosh](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Acer-A515-51G-Hackintosh/community)
+
 
 #### This File will be updated as I have more information about this issue.
