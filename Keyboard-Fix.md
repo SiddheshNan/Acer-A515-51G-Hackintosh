@@ -1,10 +1,10 @@
-# [Working] Keyboard fix for MacOS 
+## [Working] Keyboard fix for MacOS 
 
-#### Many people have reported a problem that their Keyboard is not working after installation of MacOS.
-#### Upon Further Investigation, I Have found that `BIOS` version might affect this.
-#### You need v1.19 `BIOS` verion. In Any other `BIOS` version than this, the MacOS *might* not work.
+Many people have reported a problem that their Keyboard is not working after installation of MacOS.
+Upon Further Investigation, I Have found that `BIOS` version might affect this.
+You need v1.19 `BIOS` verion. In Any other `BIOS` version than this, the MacOS *might* not work.
 
-## Really Simple Fix - Courtesy of @(rahulbablu)[https://github.com/rahulbablu]
+### Really Simple Fix - Courtesy of @[rahulbablu](https://github.com/rahulbablu)
 
 - Download the `BIOS` installer for older `BIOS`. you'll probebly get error due to older version number after running it, Please do following -
 - Run setup
@@ -24,4 +24,4 @@
 
 #### Above method is Tested and Reported to work `OK`.
 
-### This File will be updated as I have more information about this issue.
+#### This File will be updated as I have more information about this issue.
