@@ -4,6 +4,15 @@
 
 [![Join the chat at https://gitter.im/Acer-A515-51G-Hackintosh](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Acer-A515-51G-Hackintosh/community)
 
+# :rotating_light: Warning
+
+This repository is UNMAINTAINED as I've switched over to Linux, and might not work with future versions of MacOS.
+
+Consider switching over to [OpenCore](https://github.com/dbhavasagar/Acer-A515-51) as it provides much better performance improvements over Clover Bootloader
+
+---
+
+
 #### Supports MacOS 10.15.x, 10.14.x and 10.13.x
 
 <p align="center">
