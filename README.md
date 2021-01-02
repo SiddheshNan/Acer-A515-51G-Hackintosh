@@ -6,9 +6,12 @@
 
 # :rotating_light: Warning
 
-This repository is UNMAINTAINED as I've switched over to Linux, and might not work with future versions of MacOS.
+<! -- This repository is UNMAINTAINED as it uses Clover Bootloader and might not work with future versions of MacOS (11.0).
 
-Consider switching over to [OpenCore](https://github.com/dbhavasagar/Acer-A515-51) as it provides much better performance improvements over Clover Bootloader
+Consider switching over to [OpenCore](https://github.com/SiddheshNan/Acer-A515-51G-Hackintosh-OpenCore) as it provides much better performance improvements over Clover Bootloader
+
+For OpenCore Bootloader with MacOS Big Sur Support, Visit this [Repo](https://github.com/SiddheshNan/Acer-A515-51G-Hackintosh-OpenCore).
+
 
 ---
 
